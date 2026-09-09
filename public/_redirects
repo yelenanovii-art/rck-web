@@ -1,0 +1,3 @@
+# SPA fallback: if a prerendered file exists for the path Netlify serves it;
+# otherwise fall back to the app shell so client-side routes never 404.
+/*  /index.html  200

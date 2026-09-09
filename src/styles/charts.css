@@ -1,0 +1,117 @@
+/* ============================================================
+   Charts — hand-rolled SVG (EBITDA bridge, synergy line, value signal)
+   Text wears ink tokens; series colours live only on the marks.
+   ============================================================ */
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 44px;
+}
+.chart-grid--single { grid-template-columns: 1fr; max-width: 860px; }
+
+.chart {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(20px, 3vw, 30px);
+  box-shadow: var(--shadow-sm);
+}
+
+.chart__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.chart__title { font-size: 18px; color: var(--navy); letter-spacing: -0.01em; }
+.chart__sub { font-size: 13.5px; color: var(--ink-2); margin-top: 5px; max-width: 54ch; }
+
+.chart__legend { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+.chart__legend-item {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--ink-2); font-weight: 600;
+}
+.chart__legend-item i,
+.chart__tip-v i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; flex: none; }
+
+.chart__plot { position: relative; }
+.chart__plot svg { width: 100%; height: auto; display: block; overflow: visible; }
+
+/* SVG text — always ink tokens, never a series colour */
+.chart__tick,
+.chart__cat { fill: var(--muted); font-size: 12px; font-family: var(--sans); }
+.chart__val { fill: var(--navy); font-size: 13px; font-weight: 700; font-family: var(--sans); }
+.chart__val--lg { font-size: 17px; }
+.chart__anno { fill: var(--navy-700); font-size: 11px; font-weight: 700; font-family: var(--sans); }
+.chart__endlabel { fill: var(--navy); font-size: 12.5px; font-weight: 700; font-family: var(--sans); }
+
+/* Hover tooltip */
+.chart__tip {
+  position: absolute;
+  top: -6px;
+  transform: translate(-50%, -100%);
+  background: var(--navy);
+  color: #fff;
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  pointer-events: none;
+  display: grid;
+  gap: 2px;
+  z-index: 3;
+}
+.chart__tip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 10px; height: 10px;
+  background: var(--navy);
+  transform: translateX(-50%) rotate(45deg);
+}
+.chart__tip-k { font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa3ba; }
+.chart__tip-v { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; }
+
+/* Data table (accessibility) */
+.chart__data { margin-top: 14px; font-size: 13px; }
+.chart__data summary { cursor: pointer; color: var(--gold-600); font-weight: 600; width: fit-content; }
+.chart__data table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+.chart__data th, .chart__data td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+.chart__data th { color: var(--navy); font-weight: 700; }
+.chart__data td { color: var(--ink-2); }
+.chart__note { margin-top: 12px; font-size: 11.5px; color: var(--muted); }
+
+/* Bridge hover emphasis */
+.bridge-bar { transition: opacity 0.15s ease; cursor: default; }
+.bridge-bar > rect:first-of-type { transition: filter 0.15s ease; }
+.bridge-bar.is-hover > rect:first-of-type { filter: brightness(1.08); }
+
+/* ---- Draw-in on reveal ---- */
+.chart__line { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.chart.is-visible .chart__line { transition: stroke-dashoffset 1.15s ease; stroke-dashoffset: 0; }
+.chart__area { opacity: 0; }
+.chart.is-visible .chart__area { transition: opacity 0.8s ease 0.5s; opacity: 1; }
+.bridge-bar > rect:first-of-type { transform: scaleY(0); transform-box: fill-box; transform-origin: center bottom; }
+.chart.is-visible .bridge-bar > rect:first-of-type {
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: calc(var(--i) * 0.07s);
+  transform: scaleY(1);
+}
+
+@media (max-width: 820px) {
+  .chart-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chart__line { stroke-dashoffset: 0 !important; transition: none; }
+  .chart__area { opacity: 1 !important; transition: none; }
+  .bridge-bar > rect:first-of-type { transform: none !important; transition: none; }
+}

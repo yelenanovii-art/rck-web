@@ -1,0 +1,24 @@
+{
+  "name": "rck-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "RCK — Deal Advisory & Interim Execution, plus the TRANSFORM+ platform. Standalone marketing site.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/prerender.mjs",
+    "build:spa": "vite build",
+    "prerender": "node scripts/prerender.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@storyblok/react": "^7.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.10",
+    "vite-plugin-mkcert": "^2.1.0"
+  }
+}
