@@ -30,11 +30,11 @@ const META = {
     d: 'Model the value at stake, how much of our fee is actually at risk, and what waiting is costing you — built around the 40/60 risk-share model.',
   },
   '/contact': {
-    t: 'Contact — RCK Outcome Partners',
+    t: 'Contact',
     d: 'Tell us where value is leaking. A partner will respond within one business day to arrange a strategy call.',
   },
   '/about/team': {
-    t: 'The Partners — RCK Outcome Partners',
+    t: 'The Partners',
     d: 'Meet the named partners who lead every RCK engagement: senior operators with M&A, carve-out and PMI track records, personally accountable for your outcomes.',
   },
   '/services/transformation-outcomes': {
