@@ -80,8 +80,8 @@ function comet(tail, head, tip, midAlpha, start) {
 
 // RCK palette: gold comet (gold → soft gold), opposed by a champagne comet.
 function ringGradient(beams, colors) {
-  const tail0 = colors?.[0] ?? '#c47a3a' // gold
-  const head0 = colors?.[0] ?? '#e8c39c' // soft gold head
+  const tail0 = colors?.[0] ?? '#C87137' // gold
+  const head0 = colors?.[0] ?? '#e9b98d' // soft gold head
   const stops = [
     'transparent 0deg',
     comet(tail0, head0, `color-mix(in srgb, ${head0} 22%, #ffffff)`, 55, 0),

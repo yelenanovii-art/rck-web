@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 // Secondary "verified-outcome" mark (open ring + copper check). Kept for
 // decorative use in a few places; the primary identity is now the RCK wordmark.
-export function Mark({ size = 40, className = '', navy = 'currentColor', gold = '#c47a3a' }) {
+export function Mark({ size = 40, className = '', navy = 'currentColor', gold = '#C87137' }) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" className={className} role="img" aria-label="RCK">
       <circle cx="32" cy="32" r="22" fill="none" stroke={navy} strokeWidth="5" strokeDasharray="112 26" transform="rotate(52 32 32)" />
