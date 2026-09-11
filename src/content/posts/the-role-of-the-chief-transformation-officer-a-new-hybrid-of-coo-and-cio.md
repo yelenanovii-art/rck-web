@@ -4,10 +4,9 @@ date: 2024-12-10
 slug: the-role-of-the-chief-transformation-officer-a-new-hybrid-of-coo-and-cio
 description: "The Chief Transformation Officer (CTrO) role has evolved significantly over the past decade and is now at another inflexion point."
 author: "Shaun Taylor"
-hero: "/blog/eac246bcbfa97c41bfd50cc2.jpeg"
+hero: ""
 source: https://www.rckpm.es/post/the-role-of-the-chief-transformation-officer-a-new-hybrid-of-coo-and-cio
 ---
-![](/blog/0faa45a5a856ea676f5a5d3a.jpg)
 
 The Chief Transformation Officer (CTrO) role has evolved significantly over the past decade and is now at another inflexion point. This shift, driven by the rapid advancement of AI and the increasing complexity of organisational change, demands a unique blend of COO (Operational efficiency and execution) and CIO (Technology strategy and innovation) skills to address decades of poorly executed transformation buried within fragmented systems, misaligned processes, and siloed capabilities.
 
