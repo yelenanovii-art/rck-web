@@ -43,7 +43,10 @@ export default function LeadForm({
     e.preventDefault()
     const data = Object.fromEntries(new FormData(e.currentTarget))
     setStatus('sending')
-    const res = await submitForm({ _subject: `RCK website — ${submitLabel}`, ...data })
+    const res = await submitForm(
+      { _subject: `RCK website — ${submitLabel}`, ...data },
+      { formName: 'rck-lead' }
+    )
     if (res.ok) {
       setStatus('idle')
       if (manageSuccess) setSent(true)
