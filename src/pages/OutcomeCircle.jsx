@@ -39,7 +39,7 @@ function ApplicationForm() {
     fd.append('_subject', 'The Outcome Circle — membership application')
     fd.append('source', 'outcome-circle-application')
     setStatus('sending')
-    const res = await submitForm(fd)
+    const res = await submitForm(fd, { formName: 'outcome-circle' })
     setStatus(res.ok ? 'done' : 'error')
   }
 

@@ -1,16 +1,10 @@
 import CTABand from '../components/CTABand'
 import { ArrowRight } from '../components/Icons'
+import { POSTS, formatDate } from '../lib/posts'
 
-// /insights — Section 6.1. Category chips are static for now (a filterable
-// content engine can be wired later); articles link to the relevant pieces.
-const CATEGORIES = ['M&A Diligence', 'Carve-Outs & TSAs', 'The 40/60 Model', 'ERP Governance', 'Interim Management']
-
-const ARTICLES = [
-  { tag: 'The 40/60 Model', h: 'Why Traditional Consulting Incentives Guarantee Scope Bloat', href: '/about/outcomes-vs-advisory' },
-  { tag: 'Value Creation', h: 'The CFO’s Guide to Audit-Ready Synergy Realization in the General Ledger', href: '/services/value-creation-cost-transformation' },
-  { tag: 'Carve-Outs & TSAs', h: 'Quantifying the Real Cost of TSA Delay in Cross-Border Deals', href: '/diagnostics/deal-value-modeller' },
-]
-
+// /insights — the blog index. Posts come from src/content/posts/*.md (edited at
+// /admin), newest first. The curated links below the list point at the
+// evergreen model/service pages that pair with the articles.
 const MORE = [
   { tag: 'Model', h: 'Why partner-led beats matrix', href: '/about/partner-led-model' },
   { tag: 'Model', h: 'The 40/60 fee model & verification', href: '/about/outcomes-vs-advisory' },
@@ -20,27 +14,13 @@ const MORE = [
   { tag: 'Firm', h: 'Our firm & story', href: '/about/our-firm' },
 ]
 
-function Cards({ items }) {
-  return (
-    <div className="related-grid" style={{ marginTop: 22 }}>
-      {items.map((a, i) => (
-        <a className="related-card reveal" style={{ '--delay': `${(i % 3) * 70}ms` }} href={a.href} key={i}>
-          <span className="related-card__tag">{a.tag}</span>
-          <h4>{a.h}</h4>
-          <span className="related-card__go">Read <ArrowRight /></span>
-        </a>
-      ))}
-    </div>
-  )
-}
-
 export default function Insights() {
   return (
     <>
       <section className="hero hero--sub hero--article">
         <div className="container hero__inner">
           <p className="eyebrow eyebrow--light">Insights</p>
-          <h1 className="hero__title">Insights & Thought Leadership</h1>
+          <h1 className="hero__title">Insights &amp; Thought Leadership</h1>
           <p className="hero__sub">
             Operator-written analysis on M&amp;A diligence, carve-outs and TSAs, the 40/60 model, ERP
             governance and interim leadership.
@@ -50,25 +30,49 @@ export default function Insights() {
 
       <section className="section">
         <div className="container">
-          <div className="insight-cats reveal">
-            {CATEGORIES.map((c) => <span className="insight-cat" key={c}>{c}</span>)}
+          <div className="post-list">
+            {POSTS.map((p, i) => (
+              <a
+                className="post-list__item reveal"
+                style={{ '--delay': `${(i % 3) * 70}ms` }}
+                href={p.href}
+                key={p.slug}
+              >
+                <span className="post-list__meta">
+                  {formatDate(p.date)} · {p.readingTime} min read
+                </span>
+                <h2 className="post-list__title">{p.title}</h2>
+                {p.description && <p className="post-list__dek">{p.description}</p>}
+              </a>
+            ))}
           </div>
-          <Cards items={ARTICLES} />
         </div>
       </section>
 
       <section className="section section--paper">
         <div className="container">
-          <p className="eyebrow">More insights</p>
-          <Cards items={MORE} />
+          <h2 className="section-head__title">Explore the model</h2>
+          <div className="related-grid" style={{ marginTop: 22 }}>
+            {MORE.map((a, i) => (
+              <a
+                className="related-card reveal"
+                style={{ '--delay': `${(i % 3) * 70}ms` }}
+                href={a.href}
+                key={i}
+              >
+                <span className="related-card__tag">{a.tag}</span>
+                <h4>{a.h}</h4>
+                <span className="related-card__go">Read <ArrowRight /></span>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
       <CTABand
-        eyebrow="Apply the thinking"
-        title="Want this analysis applied to your deal?"
-        copy="Talk to the partner who would run it, on the 40/60 model."
-        secondary={{ label: 'The Outcome Circle™', href: '/the-outcome-circle' }}
+        eyebrow="Talk to a partner"
+        title="Turn analysis into realised value"
+        copy="A partner will respond within one business day to arrange a strategy call."
       />
     </>
   )

@@ -6,7 +6,7 @@
 // Usage: node scripts/prerender.mjs   (run after `vite build`)
 // Chrome path can be overridden with CHROME_BIN.
 import { execFileSync, spawn } from 'node:child_process'
-import { mkdirSync, writeFileSync, existsSync } from 'node:fs'
+import { mkdirSync, writeFileSync, readFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 
 const ROUTES = [
@@ -20,6 +20,26 @@ const ROUTES = [
   '/services/erp/application-si-selection', '/services/erp/programme-assurance', '/services/erp/implementation',
   '/insights', '/about/our-firm', '/privacy', '/legal', '/terms', '/cookies',
 ]
+
+// Blog posts live in src/content/posts/*.md and are added to the route list
+// from disk, so publishing a post through /admin needs no edit here. Slug comes
+// from frontmatter when present, otherwise the filename.
+const POSTS_DIR = 'src/content/posts'
+function readPosts() {
+  if (!existsSync(POSTS_DIR)) return []
+  return readdirSync(POSTS_DIR)
+    .filter((f) => f.endsWith('.md'))
+    .map((f) => {
+      const raw = readFileSync(join(POSTS_DIR, f), 'utf8')
+      const slug = (/^slug:\s*(.+)$/m.exec(raw)?.[1] || f.replace(/\.md$/, '')).trim()
+      const date = (/^date:\s*(.+)$/m.exec(raw)?.[1] || '').trim()
+      return { slug, date }
+    })
+    .sort((a, b) => (a.date < b.date ? 1 : -1))
+}
+const POSTS = readPosts()
+ROUTES.push(...POSTS.map((p) => `/post/${p.slug}`))
+console.log(`prerender: ${POSTS.length} blog post(s) discovered`)
 
 // Guard against accidental empty slots (e.g. a stray trailing comma above).
 if (ROUTES.some((r) => typeof r !== 'string' || !r)) {
@@ -55,6 +75,21 @@ if (!existsSync(DIST)) {
   console.error('dist/ not found — run `vite build` first.')
   process.exit(1)
 }
+// The static sitemap in public/ carries hand-tuned priorities for the fixed
+// pages; posts are appended here rather than regenerating and losing those.
+const SITEMAP = join(DIST, 'sitemap.xml')
+if (POSTS.length && existsSync(SITEMAP)) {
+  const xml = readFileSync(SITEMAP, 'utf8')
+  const origin = (/<loc>(https?:\/\/[^/]+)/.exec(xml)?.[1] || '').replace(/\/$/, '')
+  const entries = POSTS.filter((p) => !xml.includes(`<loc>${origin}/post/${p.slug}</loc>`))
+    .map((p) => `  <url><loc>${origin}/post/${p.slug}</loc><lastmod>${p.date}</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>`)
+    .join('\n')
+  if (entries) {
+    writeFileSync(SITEMAP, xml.replace('</urlset>', entries + '\n</urlset>'))
+    console.log(`prerender: added ${POSTS.length} post URL(s) to sitemap.xml`)
+  }
+}
+
 if (!CHROME) {
   console.warn('⚠ Chrome not found — skipping prerender (SPA build). Set CHROME_BIN to enable per-page static HTML.')
   process.exit(0)

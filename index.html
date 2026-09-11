@@ -137,6 +137,53 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- ── Netlify Forms registration ───────────────────────────────────────
+         Netlify discovers forms by scanning deployed HTML at build time, so it
+         can never see a form React only renders at runtime. These two static
+         declarations list every field the app can submit; the real UI lives in
+         src/components/LeadForm.jsx and src/pages/OutcomeCircle.jsx, which POST
+         back here with a matching `form-name`. Because the prerender step bakes
+         this markup into all 30 routes, one definition is registered per form.
+         Keep these field lists in sync with those two components. -->
+    <form name="rck-lead" data-netlify="true" hidden aria-hidden="true">
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="text" name="role" />
+      <input type="text" name="email" />
+      <input type="text" name="phone" />
+      <input type="text" name="interest" />
+      <textarea name="message"></textarea>
+      <input type="text" name="_subject" />
+      <input type="text" name="source" />
+      <input type="text" name="track" />
+      <input type="text" name="readiness" />
+      <input type="text" name="recommended_path" />
+      <input type="text" name="focus_area" />
+      <input type="text" name="deal_size" />
+      <input type="text" name="view" />
+      <input type="text" name="currency" />
+      <input type="text" name="target_uplift" />
+      <input type="text" name="outcome_fee_pct" />
+      <input type="text" name="sprints" />
+      <input type="text" name="outstanding_fee" />
+      <input type="text" name="time_fee" />
+      <input type="text" name="total_fee" />
+      <input type="text" name="value_erosion_per_year" />
+    </form>
+
+    <form name="outcome-circle" data-netlify="true" enctype="multipart/form-data" hidden aria-hidden="true">
+      <input type="text" name="_subject" />
+      <input type="text" name="source" />
+      <input type="text" name="name" />
+      <input type="text" name="email" />
+      <input type="text" name="phone" />
+      <input type="text" name="linkedin" />
+      <input type="text" name="deal_experience" />
+      <input type="text" name="outcome_aligned" />
+      <textarea name="recent_mandate"></textarea>
+      <input type="file" name="cv" />
+    </form>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

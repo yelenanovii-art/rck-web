@@ -30,11 +30,11 @@ const META = {
     d: 'Model the value at stake, how much of our fee is actually at risk, and what waiting is costing you — built around the 40/60 risk-share model.',
   },
   '/contact': {
-    t: 'Contact — RCK Outcome Partners',
+    t: 'Contact',
     d: 'Tell us where value is leaking. A partner will respond within one business day to arrange a strategy call.',
   },
   '/about/team': {
-    t: 'The Partners — RCK Outcome Partners',
+    t: 'The Partners',
     d: 'Meet the named partners who lead every RCK engagement: senior operators with M&A, carve-out and PMI track records, personally accountable for your outcomes.',
   },
   '/services/transformation-outcomes': {
@@ -283,11 +283,15 @@ function buildGraph(path, m, url) {
   return { '@context': 'https://schema.org', '@graph': graph }
 }
 
-export function useSeo(path, known = true) {
+export function useSeo(path, known = true, post = null) {
   useEffect(() => {
-    const m = META[path] || META['/']
+    // Blog posts carry their own title/description/dates from frontmatter
+    // rather than an entry in META, which only covers the fixed routes.
+    const m = post
+      ? { t: post.title, d: post.description }
+      : META[path] || META['/']
     const url = SITE_URL + (path === '/' ? '/' : path)
-    const isArticle = ARTICLE_PATHS.has(path)
+    const isArticle = Boolean(post) || ARTICLE_PATHS.has(path)
 
     document.title = (known ? m.t : 'Page Not Found') + BRAND_SUFFIX
     setMeta('description', known ? m.d : 'The page you are looking for could not be found.')
@@ -305,8 +309,8 @@ export function useSeo(path, known = true) {
     setMeta('twitter:title', document.title)
     setMeta('twitter:description', known ? m.d : '')
     if (isArticle) {
-      setMeta('article:published_time', SITE_PUBLISHED, 'property')
-      setMeta('article:modified_time', SITE_MODIFIED, 'property')
+      setMeta('article:published_time', post?.date || SITE_PUBLISHED, 'property')
+      setMeta('article:modified_time', post?.date || SITE_MODIFIED, 'property')
     }
 
     setJsonLd('rck-page-schema', buildGraph(path, m, url))
@@ -315,5 +319,5 @@ export function useSeo(path, known = true) {
     for (const [id, owner] of Object.entries(PAGE_SCHEMA_OWNERS)) {
       if (path !== owner) document.getElementById(id)?.remove()
     }
-  }, [path, known])
+  }, [path, known, post])
 }
