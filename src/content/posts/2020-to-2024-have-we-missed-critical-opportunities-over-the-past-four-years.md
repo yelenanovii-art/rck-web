@@ -17,8 +17,6 @@ Now, as we close out 2024 and look towards 2025, we face not only the impact of 
 
 The narrative has shifted from survival to reinvention. Yet many remain constrained by shrinking transformation budgets, intensifying cost pressures, and the temptation to delay and defer. As we approach 2025, it has become an urgent imperative to embrace an expansive transformation agenda. Rising costs and a contracting consumer base mean that postponing these issues is no longer viable, achieving a competitive or even disruptive advantage is the only path to growth and margin protection.
 
-![](/blog/a7a34ab2a51479f6593535ca.png)
-
 ### The New Baseline: Navigating a Complex Business Landscape
 
 The UK’s business environment has become increasingly complex, shaped not only by global disruptions but also by domestic economic policies. The Autumn Budget has amplified this complexity, introducing measures that organisations must quickly adapt to, including:

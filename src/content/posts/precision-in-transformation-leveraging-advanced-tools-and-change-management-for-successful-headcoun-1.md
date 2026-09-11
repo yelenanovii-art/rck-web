@@ -154,5 +154,3 @@ Key metrics such as spans of control, reduction ratios, and financial impacts sh
 The key rule is to never forget that effective planning and measured execution is an investment in operational stability during periods of significant disruption. As I have often heard, "you can’t overcut; it’s always easier to put heads back in." However, without a significant change management programme to inform and support the business, this approach risks chaos, eroded trust, and operational breakdowns. Instead, align headcount reduction with a comprehensive strategy that safeguards both the workforce and the organisation's future.
 
 Let’s take your transformation efforts to the next level, reach out directly at [shaun.taylor@rckpm.es](mailto:shaun.taylor@rckpm.es) for a more in-depth conversation.
-
-![](/blog/a7a34ab2a51479f6593535ca.png)

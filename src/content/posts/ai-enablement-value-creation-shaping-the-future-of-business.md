@@ -63,6 +63,4 @@ Success in the AI-first era isn’t just about adopting technology, it’s about
 
 What are your thoughts on how AI is reshaping decision-making and business applications? Are you ready to pivot faster and create sustainable value? Let’s discuss!
 
-![](/blog/a7a34ab2a51479f6593535ca.png)
-
 Let’s take your transformation efforts to the next level, reach out directly at [shaun.taylor@rckpm.es](mailto:shaun.taylor@rckpm.es) for a more in-depth conversation.

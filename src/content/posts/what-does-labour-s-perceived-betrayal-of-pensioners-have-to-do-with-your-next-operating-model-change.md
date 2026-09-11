@@ -77,6 +77,4 @@ Labour’s policy decisions serve as a powerful lesson for both Boards and C-Sui
 
 The Silent Killer of Business Transformations is clear: cultural misalignment and broken trust. These factors may not make headlines, but their impact is profound. For leaders, the mandate is clear: align words with actions, communicate transparently, and balance short-term goals with long-term organisational health. Transformation isn’t just about achieving targets, it’s about inspiring belief in the journey and commitment to the destination.
 
-![](/blog/a7a34ab2a51479f6593535ca.png)
-
 Let’s take your transformation efforts to the next level, reach out directly at [shaun.taylor@rckpm.es](mailto:shaun.taylor@rckpm.es) for a more in-depth conversation.

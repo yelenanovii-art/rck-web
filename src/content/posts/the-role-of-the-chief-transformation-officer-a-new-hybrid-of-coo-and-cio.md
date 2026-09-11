@@ -88,6 +88,4 @@ In a landscape increasingly driven by AI and digital transformation, the organis
 
 The organisations that empower their CTrOs to integrate operational, technological, and cultural elements will not only overcome barriers but also establish a competitive edge in an AI-driven economy.
 
-![](/blog/a7a34ab2a51479f6593535ca.png)
-
 Let’s take your transformation efforts to the next level, reach out directly at [shaun.taylor@rckpm.es](mailto:shaun.taylor@rckpm.es) for a more in-depth conversation.

@@ -25,8 +25,6 @@ Programs (VCPs) that focus on:
 
 - **Resilience:** Embedding leadership and behavioural change for sustainability.
 
-![](/blog/a7a34ab2a51479f6593535ca.png)
-
 ### **The Role of ERP and Integration in VCPs**
 
 Enterprise Resource Planning (ERP) systems are critical enablers of operational improvement and are often used to create Shared Services or to enable the outsourcing element of Finance, HR and other functions. Executed well they provide the backbone for aligning key business functions, finance, HR, supply chain, and customer success, but they can equally become a drag on value creation when the underperform.

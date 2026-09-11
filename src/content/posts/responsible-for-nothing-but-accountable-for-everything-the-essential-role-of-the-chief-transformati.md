@@ -124,5 +124,3 @@ Building coalitions is rarely smooth sailing, but with the right strategies, it 
 Let’s take your transformation efforts to the next level. Reach out directly at [shaun.taylor@rckpm.es](mailto:shaun.taylor@rckpm.es) for a more in-depth conversation.
 
 ****
-
-![](/blog/a7a34ab2a51479f6593535ca.png)

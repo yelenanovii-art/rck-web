@@ -35,8 +35,6 @@ Fearless transformation leaders stand out because they act with integrity, maint
 
 In transformation, only fearless leaders, armed with the courage to openly communicate both wins and setbacks, can help you steer effectively through uncertainty. When your performance is measured in the boardroom and limited touchpoints, fostering this fearless leadership isn’t just about enhancing team dynamics, it’s about safeguarding the very success of the transformation for which you’re accountable.
 
-![](/blog/a7a34ab2a51479f6593535ca.png)
-
 How are you creating and open culture and fearless leaders? Let’s Connect!
 
 Building coalitions isn’t always smooth sailing, but with the right strategies, it can unlock unmatched potential.

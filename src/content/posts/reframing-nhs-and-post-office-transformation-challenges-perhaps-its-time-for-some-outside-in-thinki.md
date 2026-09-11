@@ -29,8 +29,6 @@ My experience is that successful transformations has co-creation at its core. Fo
 
 Stakeholder co-creation isn’t just a principle; it’s a process. Tools like stakeholder mapping, focus groups, and user acceptance testing ensure that all voices are heard, especially those directly impacted by the change. Engage stakeholders early and continuously to build trust, align goals, and foster shared ownership of the change.
 
-![](/blog/a7a34ab2a51479f6593535ca.png)
-
 ### **2. Clarity and Transparency**
 
 #### Industry Insights:
