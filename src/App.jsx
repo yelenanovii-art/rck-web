@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { useRoute } from './hooks/useRoute'
 import { useReveal } from './hooks/useReveal'
 import { useSeo } from './hooks/useSeo'
+import { postFromPath } from './lib/posts'
+import Post from './pages/Post'
 import ScrollProgress from './components/ScrollProgress'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -108,9 +110,12 @@ export default function App() {
   }, [redirect])
 
   const activePath = redirect || path
-  const known = Boolean(ROUTES[activePath])
+  // Blog posts are the one dynamic route: /post/<slug> resolves against the
+  // Markdown in src/content/posts/ rather than the static ROUTES table.
+  const post = postFromPath(activePath)
+  const known = Boolean(ROUTES[activePath]) || Boolean(post)
   useReveal(activePath)
-  useSeo(activePath, known)
+  useSeo(activePath, known, post)
 
   const Page = ROUTES[activePath] || NotFound
   // The TRANSFORM+ page runs a darker, cooler theme.
@@ -121,7 +126,7 @@ export default function App() {
       <ScrollProgress />
       <Nav path={activePath} />
       <main id="top">
-        <Page />
+        {post ? <Post post={post} /> : <Page />}
       </main>
       <Footer path={activePath} />
       <CookieConsent />

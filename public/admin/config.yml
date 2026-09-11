@@ -32,3 +32,27 @@ collections:
       - { name: role, label: "Role", widget: string, hint: "e.g. Partner · Retail Operations" }
       - { name: photo, label: "Headshot", widget: image, required: false, hint: "Square image looks best; leave empty for a blank placeholder." }
       - { name: bio, label: "Bio", widget: text }
+
+  - name: posts
+    label: "Insights posts"
+    label_singular: "Post"
+    description: "Articles on /insights. The file name becomes the URL: /post/<slug>."
+    folder: "src/content/posts"
+    identifier_field: title
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{date}} — {{title}}"
+    sortable_fields: [date, title]
+    media_folder: "/public/blog"
+    public_folder: "/blog"
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: date, label: "Publish date", widget: date, format: "YYYY-MM-DD" }
+      - { name: slug, label: "URL slug", widget: string, hint: "Lives at /post/<slug>. Changing this breaks existing links — leave it alone on migrated posts." }
+      - { name: description, label: "Summary", widget: text, hint: "Shown on /insights and used as the search/social description." }
+      - { name: author, label: "Author", widget: string, default: "Shaun Taylor" }
+      - { name: hero, label: "Hero image", widget: image, required: false }
+      - { name: source, label: "Original URL", widget: string, required: false, hint: "Where the post was migrated from. Leave blank for new posts." }
+      - { name: body, label: "Body", widget: markdown }
