@@ -1,11 +1,21 @@
-# Netlify build config. `npm run build` prerenders each route if Chrome is
-# available (set CHROME_BIN), otherwise it builds a clean-URL SPA gracefully.
+# Netlify build config. `npm run build` renders every route to static HTML in
+# headless Chrome. On Netlify that Chrome comes from netlify-plugin-chromium
+# below and the build fails without it; a local build without Chrome still
+# falls back to a clean-URL SPA.
 [build]
   command = "npm run build"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
+
+# The build's prerender step (scripts/prerender.mjs) renders every route in
+# headless Chrome to write real static HTML. Netlify's build image has no
+# Chrome, so this plugin installs one and exports CHROME_PATH, which the script
+# picks up. Without it the build fails rather than quietly deploying a JS-only
+# site with no per-page HTML.
+[[plugins]]
+  package = "netlify-plugin-chromium"
 
 # ⚠️  REMOVE THIS BLOCK AT DOMAIN CUTOVER — IT HIDES THE SITE FROM GOOGLE. ⚠️
 #

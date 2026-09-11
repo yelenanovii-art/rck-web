@@ -4,7 +4,8 @@
 // HTML without executing JS. The SPA still hydrates on load.
 //
 // Usage: node scripts/prerender.mjs   (run after `vite build`)
-// Chrome path can be overridden with CHROME_BIN.
+// Chrome path can be overridden with CHROME_BIN (or CHROME_PATH, which
+// netlify-plugin-chromium sets during the Netlify build).
 import { execFileSync, spawn } from 'node:child_process'
 import { mkdirSync, writeFileSync, readFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
@@ -55,6 +56,9 @@ const DIST = 'dist'
 function findChrome() {
   const candidates = [
     process.env.CHROME_BIN,
+    process.env.CHROME_PATH, // set by netlify-plugin-chromium
+    '/usr/bin/chromium-browser',
+    '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
     '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
     '/Applications/Chromium.app/Contents/MacOS/Chromium',
     '/usr/bin/google-chrome',
@@ -91,6 +95,17 @@ if (POSTS.length && existsSync(SITEMAP)) {
 }
 
 if (!CHROME) {
+  // On CI, silently shipping an un-prerendered SPA would drop every page's
+  // static HTML — the whole point of this step — and nobody would notice until
+  // rankings moved. Fail the build instead; locally it stays a soft warning.
+  if (process.env.NETLIFY) {
+    console.error(
+      'prerender: no Chrome on the build host, so no static HTML would be written.\n' +
+      '  netlify.toml should load netlify-plugin-chromium (it sets CHROME_PATH).\n' +
+      '  Failing rather than deploying a JS-only site.'
+    )
+    process.exit(1)
+  }
   console.warn('⚠ Chrome not found — skipping prerender (SPA build). Set CHROME_BIN to enable per-page static HTML.')
   process.exit(0)
 }
