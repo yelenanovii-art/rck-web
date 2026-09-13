@@ -29,7 +29,7 @@ Labour's move to restrict winter fuel payments to pensioners on pension credit, 
 
 In politics, the repercussions of misaligned actions and communication are swift and highly visible, public outrage, relentless media scrutiny, and dwindling support. In business, the damage is subtler but equally corrosive, quietly eroding credibility, stakeholder confidence, and long-term success.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 **Key Dynamics of Misalignment in Transformation:**
 
@@ -55,7 +55,7 @@ Cultural misalignment is the silent force that derails even the best run of busi
 
 ****
 
-![](/blog/94c04de3a9fd56414c3adab3.png)
+![](/blog/94c04de3a9fd56414c3adab3.jpg)
 
 Cultural misalignment is a silent killer because it’s often unknowingly overlooked until the damage is done. Those who fail to align actions with values, communicate effectively, and build trust risk create the capacity for transformation failure. The lesson? Transformation isn’t just about hitting targets, it’s about inspiring people to believe in the journey and commit to the destination.
 

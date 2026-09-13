@@ -12,7 +12,7 @@ The Chief Transformation Officer (CTrO) role has evolved significantly over the 
 
 Traditionally, the CTrO was valued for their ability to manage numbers, driving cost efficiencies, delivering financial outcomes, and optimising budgets through operating model and process change enabled through a degree of system change. While this remains relevant, it's no longer enough. The CTrO 2.0 needs to possess a more integrated skill set that spans **People, Process, and Technology**, enabling them to lead transformation initiatives that align operational efficiency with strategic innovation.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 ### A Hybrid Role for a Complex Era
 

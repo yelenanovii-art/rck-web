@@ -107,4 +107,4 @@ Transformational success is rarely about technology or processes alone—it’s 
 
 Let’s take your transformation efforts to the next level, reach out directly at [shaun.taylor@rckpm.es](mailto:shaun.taylor@rckpm.es) for a more in-depth conversation.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)

@@ -39,7 +39,7 @@ For CEOs and Chief Transformation Officers, the challenge lies in navigating the
 
 - **Example: Turkey saw bond refinancing difficulties in 2022 as the Turkish lira depreciated sharply, forcing some firms into equity dilution to manage liabilities.**
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 ### **Opportunities: Finding Growth in Uncertainty**
 

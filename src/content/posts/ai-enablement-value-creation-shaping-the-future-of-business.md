@@ -4,7 +4,7 @@ date: 2024-12-22
 slug: ai-enablement-value-creation-shaping-the-future-of-business
 description: "Satya Nadella recently shared fascinating insights into how AI agents are set to redefine the application ecosystem."
 author: "Shaun Taylor"
-hero: "/blog/1134430ba52f6783a645d4ac.jpeg"
+hero: "/blog/1134430ba52f6783a645d4ac.jpg"
 source: https://www.rckpm.es/post/ai-enablement-value-creation-shaping-the-future-of-business
 ---
 ![](/blog/9d7847aca8ac3df9647343e4.webp)
@@ -15,7 +15,7 @@ This shift isn’t just a technological evolution; it demands a fundamental reth
 
 In my recent article, "From the Track to the Waves: Balancing the Chicken or Egg Challenge in AI-Driven Performance", I explore the challenges and opportunities of leveraging AI to optimise performance. Nadella’s insights directly align with these ideas, particularly around strategic data readiness and enablement.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 Key Principles for AI Enablement & Value Creation
 

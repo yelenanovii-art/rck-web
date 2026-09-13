@@ -4,10 +4,10 @@ date: 2024-11-30
 slug: fearless-leadership-the-key-to-successful-transformations
 description: "The consistent reality of my various CIO, COO and CTrO has been that time has been my constant enemy and this amplified when multiple Executive Sponsor roles are layered onto a busy schedule."
 author: "Shaun Taylor"
-hero: "/blog/45054bbc9449817d0a20e611.jpeg"
+hero: "/blog/45054bbc9449817d0a20e611.jpg"
 source: https://www.rckpm.es/post/fearless-leadership-the-key-to-successful-transformations
 ---
-![](/blog/45054bbc9449817d0a20e611.jpeg)
+![](/blog/45054bbc9449817d0a20e611.jpg)
 
 The consistent reality of my various CIO, COO and CTrO has been that time has been my constant enemy and this amplified when multiple Executive Sponsor roles are layered onto a busy schedule. Once you become comfortable in a state of being time-poor, task-rich, you quickly realise that the culture you foster and the team you build around you can make or break the transformation's success.
 
@@ -17,7 +17,7 @@ Almost a decade ago I was asked to take over a global ERP enables transformation
 
 In transformation, being blindsided with a false narrative renders the Executive Sponsor ineffective, leaving the problems that aren’t addressed to snowball into bigger challenges, ultimately threatening the entire initiative. The Executive Sponsor needs fearless leaders that play a critical role in surfacing problems before they grow. Without leaders who feel empowered to openly communicate challenges and risks, you’re left with a skewed view of reality, and that puts your accountability to the CEO and board in jeopardy.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 When an Executive Sponsors become unwilling or unable to hear anything but good news, they inadvertently create an echo chamber. This stifles dissent and constructive criticism, both of which are essential for navigating complex transformations. Transformation Leaders need a safe space when the update Programme Sponsors and Steering Committees, the challenge is that many Executive Sponsors come to the role without the understanding or experience to understand that the initiative they are accountable for is never a straight-line journey.
 

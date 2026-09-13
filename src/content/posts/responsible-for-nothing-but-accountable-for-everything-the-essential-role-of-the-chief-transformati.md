@@ -35,7 +35,7 @@ Let’s first connect my career experience and the challenges of 2025, in four c
 
 The modern CTrO is thus an enabler, ensuring that transformation is not merely aspirational but a well-executed effort that drives sustained value across the organisation.
 
-![](/blog/0f4d4d288d572165c7fa76aa.png)
+![](/blog/0f4d4d288d572165c7fa76aa.jpg)
 
 **The Transformation Office as the Execution Engine**
 
@@ -45,7 +45,7 @@ While the CTrO provides leadership, the Transformation Office (TO) is the execut
 
 Key elements of an effective TO include:
 
-![](/blog/01c04763b891decbce8bd050.png)
+![](/blog/01c04763b891decbce8bd050.jpg)
 
 - **Value Mapping and Prioritisation**: Working closely with the CTrO to identify areas of greatest opportunity, prioritise initiatives, and ensure that resources are allocated where they will have the most significant impact.
 
@@ -101,7 +101,7 @@ Non-core asset disposal, optimising accounts payable and receivable, and renegot
 
 Customer care transformation aligns closely with operational efficiency and value creation objectives. Leveraging technology, such as AI-driven chatbots, predictive analytics, and digital self-service channels, enables organisations to deliver enhanced customer experiences at a lower cost. The CTrO and TO must integrate these customer care initiatives into the transformation roadmap to deliver measurable results that align with broader business objectives.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 **Conclusion: A Holistic Approach to Transformation**
 

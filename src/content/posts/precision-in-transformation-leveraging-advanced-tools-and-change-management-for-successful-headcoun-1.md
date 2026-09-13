@@ -139,7 +139,7 @@ The ultimate success of headcount reduction initiatives depends on sustained tra
 
 - Gate-based initiative management to align with broader transformation goals.
 
-![](/blog/2a01458cbc1f924706f7fe1c.png)
+![](/blog/2a01458cbc1f924706f7fe1c.jpg)
 
 Programmes like TOM Mix Analysis illustrate how consistent benefit tracking sustains transformation outcomes.
 
@@ -149,7 +149,7 @@ Headcount reduction is a complex and sensitive process that demands rigorous pla
 
 Key metrics such as spans of control, reduction ratios, and financial impacts should be central to any workforce planning initiative. Leaders must integrate these tools and strategies to ensure smoother transitions, stronger organisational structures, and a foundation for future growth and resilience.
 
-![](/blog/ad544b51a38aeac9f49ba8d0.png)
+![](/blog/ad544b51a38aeac9f49ba8d0.jpg)
 
 The key rule is to never forget that effective planning and measured execution is an investment in operational stability during periods of significant disruption. As I have often heard, "you can’t overcut; it’s always easier to put heads back in." However, without a significant change management programme to inform and support the business, this approach risks chaos, eroded trust, and operational breakdowns. Instead, align headcount reduction with a comprehensive strategy that safeguards both the workforce and the organisation's future.
 

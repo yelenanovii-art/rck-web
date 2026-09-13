@@ -4,12 +4,12 @@ date: 2024-11-24
 slug: reframing-nhs-and-post-office-transformation-challenges-perhaps-its-time-for-some-outside-in-thinki
 description: "A recent BBC news report (https://www.bbc.co.uk/news/articles/c2dly5ldrxjo) on the NHS placed a spot light on the challenges of integrating Physician Associates (PAs) and Anaesthesia Associates (AAs)."
 author: "Shaun Taylor"
-hero: "/blog/64b94873b3bdd85a515b6f2f.jpeg"
+hero: "/blog/64b94873b3bdd85a515b6f2f.jpg"
 source: https://www.rckpm.es/post/reframing-nhs-and-post-office-transformation-challenges-perhaps-its-time-for-some-outside-in-thinki
 ---
 Updated: Nov 25, 2024
 
-![](/blog/64b94873b3bdd85a515b6f2f.jpeg)
+![](/blog/64b94873b3bdd85a515b6f2f.jpg)
 
 A recent BBC news report ([https://www.bbc.co.uk/news/articles/c2dly5ldrxjo](https://www.bbc.co.uk/news/articles/c2dly5ldrxjoThe)[)](https://www.bbc.co.uk/news/articles/c2dly5ldrxjoThe) on the NHS placed a spot light on the challenges of integrating Physician Associates (PAs) and Anaesthesia Associates (AAs). When you look at this alongside other widely publicised issues across the public sector including the Post Office Horizon scandal, they all reveal fundamental missteps across the transformation lifecycle. Even at a distance you can see clear signs of poor stakeholder engagement, cultural misalignment, and inadequate accountability.
 
@@ -127,4 +127,4 @@ Transformational success is rarely about technology or processes alone—it’s 
 
 Let’s take your transformation efforts to the next level, reach out directly at [shaun.taylor@rckpm.es](mailto:shaun.taylor@rckpm.es) for a more in-depth conversation.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)

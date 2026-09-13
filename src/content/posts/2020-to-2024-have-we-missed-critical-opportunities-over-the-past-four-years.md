@@ -4,12 +4,12 @@ date: 2024-11-21
 slug: 2020-to-2024-have-we-missed-critical-opportunities-over-the-past-four-years
 description: "Let us rewind to the beginning of 2020, when we were all completely unprepared for the impact of a global pandemic. COVID-19 disrupted every imaginable aspect of professional and personal life, demanding levels of agility and adaptability outside of our conventional thinking."
 author: "Shaun Taylor"
-hero: "/blog/774e457aaa7ef1be1dffee71.png"
+hero: "/blog/774e457aaa7ef1be1dffee71.jpg"
 source: https://www.rckpm.es/post/2020-to-2024-have-we-missed-critical-opportunities-over-the-past-four-years
 ---
 Updated: Nov 25, 2024
 
-![](/blog/774e457aaa7ef1be1dffee71.png)
+![](/blog/774e457aaa7ef1be1dffee71.jpg)
 
 Let us rewind to the beginning of 2020, when we were all completely unprepared for the impact of a global pandemic. COVID-19 disrupted every imaginable aspect of professional and personal life, demanding levels of agility and adaptability outside of our conventional thinking. Although the pandemic has faded into memory, it has been replaced by geopolitical tensions, including the Ukraine conflict, China’s continued challenge to Taiwan’s sovereignty, and changes post UK Budget and a US election, all contributing to an economic climate fraught with uncertainty and volatility.
 
@@ -85,7 +85,7 @@ The challenges are immense, but the opportunities are equally significant. By em
 
 The future demands agility, precision, and visionary leadership. Now is the time to innovate, expand, and thrive.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 ### How Are You Fostering Coalitions to Drive Transformation? Let’s Connect!
 

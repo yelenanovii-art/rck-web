@@ -31,7 +31,7 @@ Racing teams are a masterclass in balancing these priorities. They never invest 
 
 In other words, they treat organisational readiness and use cases as inseparable. Each new performance question (the use case) informs what data and capabilities are needed. Each investment in better data and stronger processes unlocks new, more ambitious use cases.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 **Finding the Right Sequence for Your Organisation**
 

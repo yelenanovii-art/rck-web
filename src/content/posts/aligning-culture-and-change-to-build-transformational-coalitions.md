@@ -81,7 +81,7 @@ Organisations that invest in aligning culture and change:
 
 - Achieve sustainable success by making transformation a shared journey.
 
-![](/blog/1134430ba52f6783a645d4ac.jpeg)
+![](/blog/1134430ba52f6783a645d4ac.jpg)
 
 ### How Are You Fostering Coalitions to Drive Transformation? Let’s Connect!
 
