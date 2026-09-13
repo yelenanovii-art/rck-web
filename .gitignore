@@ -7,3 +7,9 @@ dist
 *.log
 .vite
 storyblok-tokens.txt
+
+# Local Netlify folder
+.netlify
+
+# Generated before each build by scripts/build-posts-index.mjs
+src/content/posts-index.json

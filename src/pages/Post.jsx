@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react'
 import CTABand from '../components/CTABand'
 import { ArrowRight } from '../components/Icons'
-import { POSTS, formatDate } from '../lib/posts'
+import { POSTS, formatDate, loadPostHtml } from '../lib/posts'
 
 // A single blog post (/post/<slug>). Body HTML comes from the Markdown in
 // src/content/posts/, rendered at build time in src/lib/posts.js — the content
@@ -10,6 +11,15 @@ import { POSTS, formatDate } from '../lib/posts'
 // lives in <AuthorCard> so there is one copy to keep current.
 export default function Post({ post }) {
   const more = POSTS.filter((p) => p.slug !== post.slug).slice(0, 3)
+  // The body lives in its own chunk so the rest of the site doesn't carry it.
+  // The prerender's headless Chrome resolves this before it dumps the DOM, so
+  // the static HTML still ships the full article.
+  const [html, setHtml] = useState('')
+  useEffect(() => {
+    let live = true
+    loadPostHtml(post).then((h) => { if (live) setHtml(h) })
+    return () => { live = false }
+  }, [post])
 
   return (
     <>
@@ -41,7 +51,7 @@ export default function Post({ post }) {
 
       <section className="section">
         <div className="container">
-          <article className="prose post-body" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <article className="prose post-body" dangerouslySetInnerHTML={{ __html: html }} />
           <AuthorCard name={post.author} />
         </div>
       </section>
