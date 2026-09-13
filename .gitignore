@@ -11,5 +11,6 @@ storyblok-tokens.txt
 # Local Netlify folder
 .netlify
 
-# Generated before each build by scripts/build-posts-index.mjs
+# Generated before each build (scripts/build-posts-index.mjs, fetch-storyblok.mjs)
 src/content/posts-index.json
+src/content/home.json

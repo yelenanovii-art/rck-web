@@ -5,9 +5,9 @@
   "type": "module",
   "description": "RCK \u2014 Deal Advisory & Interim Execution, plus the TRANSFORM+ platform. Standalone marketing site.",
   "scripts": {
-    "dev": "node scripts/build-posts-index.mjs && vite",
-    "build": "node scripts/build-posts-index.mjs && vite build && node scripts/prerender.mjs",
-    "build:spa": "node scripts/build-posts-index.mjs && vite build",
+    "dev": "node scripts/fetch-storyblok.mjs && node scripts/build-posts-index.mjs && vite",
+    "build": "node scripts/fetch-storyblok.mjs && node scripts/build-posts-index.mjs && vite build && node scripts/prerender.mjs",
+    "build:spa": "node scripts/fetch-storyblok.mjs && node scripts/build-posts-index.mjs && vite build",
     "prerender": "node scripts/prerender.mjs",
     "preview": "vite preview"
   },
