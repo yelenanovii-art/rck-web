@@ -9,6 +9,13 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Serverless functions — currently the GitHub OAuth handshake that signs editors
+# into /admin. Served at /.netlify/functions/<name>, which bypasses the SPA
+# catch-all in public/_redirects.
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 # The build's prerender step (scripts/prerender.mjs) renders every route in
 # headless Chrome to write real static HTML. Netlify's build image has no
 # Chrome, so this plugin installs one and exports CHROME_PATH, which the script

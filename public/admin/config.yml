@@ -3,8 +3,18 @@
 # rebuilds and deploys automatically.
 
 backend:
-  name: git-gateway # Netlify Identity + Git Gateway (set up in Netlify)
+  # GitHub directly, not Netlify Identity + Git Gateway: Netlify is winding
+  # Identity down, and it never got enabled here. Editors sign in with their
+  # GitHub account and need write access to this repo.
+  #
+  # The OAuth handshake runs in netlify/functions/{auth,callback}.js so the
+  # client secret stays server-side. Those functions derive their own URLs from
+  # the request, so this keeps working after the domain cutover.
+  name: github
+  repo: yelenanovii-art/rck-web
   branch: main # the branch the site deploys from
+  base_url: https://rck-web.netlify.app
+  auth_endpoint: .netlify/functions/auth
 
 # Lets you preview the CMS locally with: npx decap-server  (then open /admin)
 local_backend: true
