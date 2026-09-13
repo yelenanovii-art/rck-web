@@ -24,6 +24,22 @@
 [[plugins]]
   package = "netlify-plugin-chromium"
 
+# Baseline security headers. Deliberately not a full Content-Security-Policy:
+# the site pulls Google Fonts, Decap from unpkg and the Storyblok bridge, so a
+# script-src policy needs testing against all three rather than guessing.
+#
+# frame-ancestors is the exception — it is safe to be strict about, and stops
+# the site being framed for clickjacking. app.storyblok.com is allowed because
+# the Visual Editor previews the deployed site inside an iframe; remove that
+# origin and content editing breaks.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "frame-ancestors 'self' https://app.storyblok.com"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+
 # ⚠️  REMOVE THIS BLOCK AT DOMAIN CUTOVER — IT HIDES THE SITE FROM GOOGLE. ⚠️
 #
 # The site currently serves from rck-web.netlify.app while www.rckpm.es still

@@ -1,3 +1,36 @@
+# ── Old Wix URLs → their equivalents here ────────────────────────────────────
+# The previous site (www.rckpm.es, Wix) had 16 indexed pages plus three copies
+# of a demo "news" collection. Those URLs keep their search equity only if they
+# land somewhere sensible instead of 404ing at the domain cutover. Listed before
+# the SPA fallback below, because Netlify takes the first rule that matches.
+#
+# Blog posts need nothing: they were migrated at their original /post/<slug>.
+
+/blog                        /insights                                       301!
+/our-work                    /case-studies                                   301!
+/about                       /about/our-firm                                 301!
+/our-team                    /about/team                                     301!
+/services-3                  /advisory                                       301!
+/erp-transformation          /services/erp-enterprise-applications           301!
+/cost-transformation         /services/value-creation-cost-transformation    301!
+/operational-transformation  /services/transformation-outcomes               301!
+/m-a-integration             /services/deal-advisory-carve-outs              301!
+
+# Judgement calls — say the word and I'll repoint either.
+/associates                  /about/team                                     301!
+/book-online                 /contact                                        301!
+
+# Wix template demo content that was never removed from the old site
+# ("5 Most Promising Fintech Startups", "Best Smart Wearables of 2023"…),
+# duplicated across three collections. Nothing here to preserve, so the whole
+# tree goes to the real insights index.
+/news/*                      /insights                                       301!
+/news-1/*                    /insights                                       301!
+/news-1-1/*                  /insights                                       301!
+/news                        /insights                                       301!
+/news-1                      /insights                                       301!
+/news-1-1                    /insights                                       301!
+
 # SPA fallback: if a prerendered file exists for the path Netlify serves it;
 # otherwise fall back to the app shell so client-side routes never 404.
 /*  /index.html  200
