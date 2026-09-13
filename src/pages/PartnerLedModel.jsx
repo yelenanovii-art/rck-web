@@ -14,18 +14,18 @@ export default function PartnerLedModel() {
         {
           type: 'prose',
           eyebrow: 'The Structural Dilemma: Accountability Diffused by Design',
-          heading: 'Built to Maximize Billable Hours. Not Your Outcome.',
+          heading: 'Built to Maximise Billable Hours. Not Your Outcome.',
           body: [
             'In a conventional matrix firm, your mandate passes through four distinct hands before real work begins: the origination partner who sold it, the resource manager who staffed it, the project manager who oversees it, and the junior bench executing the slides.',
             'When targets are missed, the matrix provides total plausible deniability.',
-            'That isn’t an accident. A matrix structure optimizes for **consultant utilization and fee extraction**, not end-to-end P&L ownership. You receive polished slideware and theoretical roadmaps, while bearing 100% of the operational and downside risk yourself.',
+            'That isn’t an accident. A matrix structure optimises for **consultant utilisation and fee extraction**, not end-to-end P&L ownership. You receive polished slideware and theoretical roadmaps, while bearing 100% of the operational and downside risk yourself.',
           ],
         },
         {
           type: 'points',
           heading: 'What Partner-Led Execution Solves',
           items: [
-            { h: 'Single-Point Operational Ownership', p: 'A named Managing Partner carries direct accountability for your mandate from inception to value realization. There are no junior pyramids to delegate to, no matrix layers to hide behind, and zero hand-offs where strategic intent gets diluted.' },
+            { h: 'Single-Point Operational Ownership', p: 'A named Managing Partner carries direct accountability for your mandate from inception to value realisation. There are no junior pyramids to delegate to, no matrix layers to hide behind, and zero hand-offs where strategic intent gets diluted.' },
             { h: 'Unbroken Strategic Continuity', p: 'The senior practitioner who scopes the thesis, whether in M&A diligence, carve-out separation, or transformation roadmapping, is the same operator governing in-seat execution. We eliminate the costly translation gap between strategy design and operational delivery.' },
             { h: 'True Commercial Alignment', p: 'The partner governing your mandate carries direct downside risk under our **40/60 outcome model**. With 60% of our fees unlocked only upon independent GL verification of your milestones, alignment is a binding commercial reality, not marketing copy in a pitch deck.' },
           ],
@@ -37,8 +37,8 @@ export default function PartnerLedModel() {
           heading: 'Execution Velocity Beats Matrix Overhead',
           body: [
             'The institutional default is often to hire the largest advisory firm, assuming sheer headcount provides coverage and an insurance policy against failure. Yet in complex M&A, carve-outs, and transformations, failure is rarely caused by a shortage of people. It is driven by the coordination friction of too many.',
-            'In traditional matrix firms, decisions are routed through regional practice lines, staffing committees, and internal review layers before reaching the ground. Clients pay premium rates that quietly subsidize internal firm management, while delivery is delegated to junior associates learning on client time.',
-            'Fewer layers mean higher operational velocity. A partner-led model eliminates organizational inertia, ensuring direct, senior-level intervention within 72 hours, translating diagnosis into decisive General Ledger impact without matrix delay.',
+            'In traditional matrix firms, decisions are routed through regional practice lines, staffing committees, and internal review layers before reaching the ground. Clients pay premium rates that quietly subsidise internal firm management, while delivery is delegated to junior associates learning on client time.',
+            'Fewer layers mean higher operational velocity. A partner-led model eliminates organisational inertia, ensuring direct, senior-level intervention within 72 hours, translating diagnosis into decisive General Ledger impact without matrix delay.',
           ],
         },
         {

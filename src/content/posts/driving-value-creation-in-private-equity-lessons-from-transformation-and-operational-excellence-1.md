@@ -51,7 +51,7 @@ Robust governance frameworks are essential to the success of VCPs. They ensure a
 
 - **Data-Driven Oversight:** Utilising tools like McKinsey Wave for benefit tracking and real-time adjustments.
 
-**RCK Insight:**In a complex transformation involving operational and cash-flow improvements, a structured governance model led to $205M in annualized savings and significant EBITDA enhancements. Cross-regional transformation teams ensured alignment and timely execution.
+**RCK Insight:**In a complex transformation involving operational and cash-flow improvements, a structured governance model led to $205M in annualised savings and significant EBITDA enhancements. Cross-regional transformation teams ensured alignment and timely execution.
 
 ### **Operational Excellence through Leadership and Culture**
 
@@ -59,7 +59,7 @@ Beyond tools and frameworks, successful transformations hinge on leadership and 
 
 **Key Levers:**
 
-- **Behavioural Change:** Shifting organizational mindsets to embrace new ways of working.
+- **Behavioural Change:** Shifting organisational mindsets to embrace new ways of working.
 
 - **Leadership Engagement:** Active involvement of senior leaders to champion initiatives.
 

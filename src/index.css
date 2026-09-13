@@ -135,10 +135,14 @@ strong { font-weight: 700; color: var(--ink); }
   padding-inline: var(--gutter);
 }
 
+/* Vertical rhythm. The upper bounds were 118px / 78px, which stacked to 236px
+   of clear space between two sections on a wide screen and made the page read
+   as disconnected blocks. Tightened ~35% so it scrolls as one piece; the lower
+   bounds stay close to the old values so narrow screens are unaffected. */
 .section {
-  padding-block: clamp(60px, 8.5vw, 118px);
+  padding-block: clamp(52px, 5.6vw, 78px);
 }
-.section--tight { padding-block: clamp(46px, 6vw, 78px); }
+.section--tight { padding-block: clamp(38px, 4vw, 54px); }
 
 /* ---------- Section openers ---------- */
 .eyebrow {

@@ -50,8 +50,10 @@ const NAV = [
     type: 'group',
     label: 'Approach',
     items: [
-      { to: '/advisory', label: 'How We Work' },
+      // The 40/60 model leads: it is the defining commercial proposition, so it
+      // sits above the general "how we work" page rather than under it.
       { to: '/about/outcomes-vs-advisory', label: 'The 40/60 Fee Model' },
+      { to: '/advisory', label: 'How We Work' },
       { to: '/about/partner-led-model', label: 'Why Partner-Led Beats Matrix' },
       { to: '/services/integrated-interim', label: 'Why Interim Should Be Integrated' },
       { to: '/about/founder-built-playbooks', label: 'Founder-Built Playbooks' },
@@ -88,6 +90,11 @@ function Caret() {
 export default function Nav({ path }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  // The desktop menus open on :hover/:focus-within. After clicking through to a
+  // page the pointer is still inside the panel and the link keeps focus, so the
+  // menu stays up until the mouse happens to move away. Suppress it on
+  // navigation and release once the pointer actually leaves the header.
+  const [suppressed, setSuppressed] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -98,6 +105,9 @@ export default function Nav({ path }) {
 
   useEffect(() => {
     setOpen(false)
+    setSuppressed(true)
+    // Drop focus too, or :focus-within holds the panel open on its own.
+    if (typeof document !== 'undefined') document.activeElement?.blur?.()
   }, [path])
 
   useEffect(() => {
@@ -119,7 +129,12 @@ export default function Nav({ path }) {
   )
 
   return (
-    <header className={`nav ${scrolled ? 'nav--scrolled' : ''} ${open ? 'nav--open' : ''}`}>
+    <header
+      className={`nav ${scrolled ? 'nav--scrolled' : ''} ${open ? 'nav--open' : ''} ${
+        suppressed ? 'nav--suppressed' : ''
+      }`}
+      onMouseLeave={() => setSuppressed(false)}
+    >
       <div className="nav__inner container">
         <Logo compact onDark={!scrolled || open} />
 

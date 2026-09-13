@@ -69,12 +69,12 @@ const META = {
   },
   '/services/value-creation-cost-transformation': {
     t: 'Value Creation & Cost Transformation',
-    d: 'Operational restructuring and OPEX optimization verified in your General Ledger. 60% of fees contingent on EBITDA, SG&A and synergy baselines.',
+    d: 'Operational restructuring and OPEX optimisation verified in your General Ledger. 60% of fees contingent on EBITDA, SG&A and synergy baselines.',
     k: 'value creation, cost transformation, OPEX, PMI, synergy, EBITDA',
   },
   '/services/restructuring-turnaround': {
     t: 'Restructuring & Operational Turnaround',
-    d: 'Rapid liquidity stabilization, cash governance and operational recovery. Managing Partners and in-seat COOs deployed within 72 hours.',
+    d: 'Rapid liquidity stabilisation, cash governance and operational recovery. Managing Partners and in-seat COOs deployed within 72 hours.',
     k: 'restructuring, turnaround, working capital, distressed, interim COO',
   },
   '/services/erp-enterprise-applications': {

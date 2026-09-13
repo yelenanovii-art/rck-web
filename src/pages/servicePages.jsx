@@ -49,7 +49,7 @@ const PAGES = {
 
   valueCreation: {
     eyebrow: 'Advisory & Transformation',
-    title: 'Operational Restructuring and OPEX Optimization, Verified in Your General Ledger.',
+    title: 'Operational Restructuring and OPEX Optimisation, Verified in Your General Ledger.',
     dek: 'Positioned against theoretical consulting decks. 60% of fees are contingent upon EBITDA targets, SG&A reduction, and synergy baselines verified through hard accounting data.',
     meta: '40% fixed · 60% outcome-at-risk',
     blocks: [
@@ -58,7 +58,7 @@ const PAGES = {
         eyebrow: 'Capabilities',
         heading: 'Core modules',
         items: [
-          'Zero-based organizational redesign and direct/indirect OPEX rationalization.',
+          'Zero-based organisational redesign and direct/indirect OPEX rationalisation.',
           'Post-merger integration (PMI) and multi-entity synergy capture.',
           'Dual-metric variance governance: in-year cash impact plus run-rate EBITDA exit rate.',
         ],
@@ -66,7 +66,7 @@ const PAGES = {
       {
         type: 'quote',
         tint: true,
-        text: 'PE Portfolio Integration: a £200M revenue group realized £18M of verified EBITDA improvement across 14 European operating entities.',
+        text: 'PE Portfolio Integration: a £200M revenue group realised £18M of verified EBITDA improvement across 14 European operating entities.',
         cite: 'Verified engagement',
       },
       {
@@ -74,7 +74,7 @@ const PAGES = {
         heading: 'Diagnostics & tools',
         items: [
           { tag: 'Diagnostic', h: 'Value-at-Risk Assessment (value creation)', href: '/diagnostics/value-at-risk' },
-          { tag: 'Playbook', h: 'SG&A & Footprint Optimization Playbook', href: '/resources/playbooks' },
+          { tag: 'Playbook', h: 'SG&A & Footprint Optimisation Playbook', href: '/resources/playbooks' },
         ],
       },
     ],
@@ -89,8 +89,8 @@ const PAGES = {
 
   restructuring: {
     eyebrow: 'Advisory & Transformation',
-    title: 'Rapid Liquidity Stabilization, Cash Governance, and Operational Recovery.',
-    dek: 'Immediate deployment of Managing Partners and in-seat COOs within 72 hours to stabilize distressed assets, protect covenants, and recover working capital.',
+    title: 'Rapid Liquidity Stabilisation, Cash Governance, and Operational Recovery.',
+    dek: 'Immediate deployment of Managing Partners and in-seat COOs within 72 hours to stabilise distressed assets, protect covenants, and recover working capital.',
     meta: '72-hour deployment · in-seat COO bench',
     blocks: [
       {
@@ -99,8 +99,8 @@ const PAGES = {
         heading: 'Core modules',
         items: [
           '13-week cash-flow forecasting and tactical working capital release (AP / AR / inventory).',
-          'Unprofitable product-line and facility rationalization and footprint closure.',
-          'Critical creditor, supplier, and customer relationship stabilization.',
+          'Unprofitable product-line and facility rationalisation and footprint closure.',
+          'Critical creditor, supplier, and customer relationship stabilisation.',
         ],
       },
       {

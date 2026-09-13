@@ -15,7 +15,7 @@ export default function InterimManagement() {
           heading: 'The four interim pillars',
           items: [
             { h: 'Interim CFO & Finance Operations', p: 'Standalone finance team setup, audited baseline reporting, ERP controls, and TSA cash separation.' },
-            { h: 'Interim COO & Supply Chain Execution', p: 'Multi-site consolidation, plant restructuring, footprint optimization, and working capital.' },
+            { h: 'Interim COO & Supply Chain Execution', p: 'Multi-site consolidation, plant restructuring, footprint optimisation, and working capital.' },
             { h: 'Interim CIO/CTO & Technology Cutover', p: 'Systems detachment, data migration, cyber risk, cloud infrastructure, and vendor contract renegotiation.' },
             { h: 'Interim CTrO & Programme Leadership', p: 'Board-level Chief Transformation Officers, PMI Programme Directors, and TMO/VMO leaders governing multi-workstream execution.' },
           ],

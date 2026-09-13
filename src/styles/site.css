@@ -80,11 +80,14 @@
 
 .nav__links {
   display: flex;
-  align-items: center;
+  align-self: stretch;   /* so each group can stretch to the header's height */
+  align-items: stretch;
   gap: 30px;
   margin-left: auto;
   margin-right: 26px;
 }
+/* Plain links keep their natural height so the underline indicator stays put. */
+.nav__links > .nav__link { display: inline-flex; align-items: center; }
 .nav__link {
   position: relative;
   font-size: 14.5px;
@@ -344,8 +347,8 @@
   isolation: isolate;
   background: linear-gradient(160deg, #081428 0%, #0f2545 46%, #173257 100%);
   color: #fff;
-  padding-top: calc(var(--nav-h) + clamp(46px, 7vw, 88px));
-  padding-bottom: clamp(64px, 8vw, 104px);
+  padding-top: calc(var(--nav-h) + clamp(38px, 4.8vw, 62px));
+  padding-bottom: clamp(48px, 5.6vw, 74px);
   overflow: hidden;
 }
 /* Slowly drifting aurora of gold + blue light */
@@ -2497,7 +2500,17 @@ table.stack tbody tr:nth-child(even) { background: #faf9f6; }
 /* ============================================================
    SECTION 4  —  Grouped navigation (dropdowns + drawer groups)
    ============================================================ */
-.nav__group { position: relative; display: inline-flex; }
+/* The group spans the full height of the header, for two reasons: the hover
+   target stays contiguous from the trigger to the panel (otherwise the pointer
+   crosses dead space and the menu closes), and top:100% resolves to the header's
+   bottom edge — the same line the static-positioned mega panel uses, so every
+   menu opens at one height instead of the mega hanging 25px lower. */
+.nav__group {
+  position: relative;
+  display: inline-flex;
+  align-self: stretch;
+  align-items: center;
+}
 .nav__trigger {
   display: inline-flex;
   align-items: center;
@@ -2532,6 +2545,16 @@ table.stack tbody tr:nth-child(even) { background: #faf9f6; }
   pointer-events: auto;
   transform: translate(-50%, 0);
 }
+/* Set while navigating away: outranks the :hover/:focus-within rules above by
+   source order at equal specificity, so a clicked menu closes immediately
+   instead of lingering until the pointer moves. */
+.nav--suppressed .nav__group:hover .nav__menu,
+.nav--suppressed .nav__group:focus-within .nav__menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .nav__menu-inner {
   min-width: 292px;
   background: var(--surface);
@@ -3285,8 +3308,8 @@ table.stack tbody tr:nth-child(even) { background: #faf9f6; }
    only) — desktop spacing is untouched. Placed last so it wins the cascade
    over the unconditional .section / grid margins. */
 @media (max-width: 640px) {
-  .section { padding-block: 46px; }
-  .section--tight { padding-block: 34px; }
+  .section { padding-block: 36px; }
+  .section--tight { padding-block: 26px; }
   .eyebrow { margin-bottom: 12px; }
   .lead { margin-top: 14px; }
   /* gap between a section heading and the content block under it */

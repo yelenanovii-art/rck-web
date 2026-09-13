@@ -36,7 +36,7 @@ function ApplicationForm() {
     // Drop the file input entirely if no CV was attached.
     const cv = fd.get('cv')
     if (!cv || (cv.size === 0 && cv.name === '')) fd.delete('cv')
-    fd.append('_subject', 'The Outcome Circle — membership application')
+    fd.append('_subject', 'The Outcome Circle — application to join')
     fd.append('source', 'outcome-circle-application')
     setStatus('sending')
     const res = await submitForm(fd, { formName: 'outcome-circle' })
@@ -178,7 +178,7 @@ export default function OutcomeCircle() {
               COOs, CIOs, and Transformation Leaders.
             </p>
             <a className="btn btn-gold btn-lg" href="#application-form" onClick={(e) => scrollToId(e, 'application-form')}>
-              Apply for Membership <ArrowRight />
+              Apply to Join <ArrowRight />
             </a>
           </div>
 
@@ -214,7 +214,7 @@ export default function OutcomeCircle() {
           <div className="oc-gate reveal">
             <h3>The Standard for Admission</h3>
             <p className="oc-gate__sub">
-              Membership is strictly restricted to seasoned practitioners with a proven track record
+              Joining is strictly restricted to seasoned practitioners with a proven track record
               of board-level execution.
             </p>
             <ul className="oc-gate__list">
