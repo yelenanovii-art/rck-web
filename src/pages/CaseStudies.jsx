@@ -19,7 +19,7 @@ const CASES = [
   },
   {
     tag: 'Carve-out · $250M',
-    stat: '< 72 hrs',
+    stat: 'Week 1',
     h: 'Senior partners mobilised on a carve-out',
     p: 'Pre-vetted partners across 12+ workstreams, in seat in Week 1 of engagement.',
   },

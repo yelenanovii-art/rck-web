@@ -184,13 +184,7 @@ export default function Advisory() {
           />
           <div className="stats-row">
             <div className="stat-card reveal">
-              <Stat staticText="$128M" dark label="Opex unlocked vs a US$120M target (107%), independently verified by the client’s external auditor — operating-model redesign across 31 markets, span of control 5.1 → 5.8" />
-            </div>
-            <div className="stat-card reveal" style={{ '--delay': '90ms' }}>
-              <Stat staticText="42→91%" dark label="Synergy recovery on a stalled €15M programme, clearing 27 late milestones under new governance" />
-            </div>
-            <div className="stat-card reveal" style={{ '--delay': '180ms' }}>
-              <Stat staticText="<72 hrs" dark label="Deployment of pre-vetted senior partners across 12+ workstreams on a $250M carve-out" />
+              <Stat staticText="$128M" dark label="Opex unlocked vs a US$120M target (107%), independently verified by the client’s external auditor — operating-model redesign across 31 markets." />
             </div>
           </div>
           <p className="stats-footnote">Anonymised, representative of engagement type. Full detail available under NDA.</p>

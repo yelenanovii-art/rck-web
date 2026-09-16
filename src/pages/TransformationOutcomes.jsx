@@ -48,10 +48,9 @@ export default function TransformationOutcomes() {
         },
         {
           type: 'stats',
+          // C5 — one statistic here; the full set lives on home and /case-studies.
           items: [
             { n: '85%+', t: 'of engagements hit 90%+ of target outcomes' },
-            { n: '60%', t: 'of the fee tied to verified milestones' },
-            { n: '175+', t: 'combined partner years across 7 named partners' },
           ],
         },
         {

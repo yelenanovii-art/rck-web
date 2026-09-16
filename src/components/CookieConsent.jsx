@@ -32,6 +32,17 @@ export default function CookieConsent() {
     setOpen(false)
   }
 
+  // Ticket 5 — the banner is fixed to the bottom, so on first paint it sits on
+  // top of whatever is at the foot of the viewport (on the fee page, the
+  // comparison cards the hero CTA jumps to). Reserving its height at the bottom
+  // of the document means nothing is ever permanently covered, at any width.
+  useEffect(() => {
+    const el = document.documentElement
+    if (open) el.classList.add('has-cookie-banner')
+    else el.classList.remove('has-cookie-banner')
+    return () => el.classList.remove('has-cookie-banner')
+  }, [open])
+
   if (!open) return null
 
   return (

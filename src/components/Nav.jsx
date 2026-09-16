@@ -204,8 +204,22 @@ export default function Nav({ path }) {
         </div>
       </div>
 
-      {/* Mobile drawer */}
-      <div className="nav__drawer" role="dialog" aria-modal="true" aria-hidden={!open}>
+      {/* Mobile drawer.
+
+          Ticket 21 — the closed drawer is only translated off-screen, not
+          removed, so without `inert` its links stay in the tab order and a
+          keyboard user lands in an invisible menu. aria-hidden alone made that
+          worse (focusable but hidden from screen readers), so both are set.
+          With this, only one copy of the link set is ever in the accessibility
+          tree: the desktop nav is display:none on mobile, and the drawer is
+          display:none above the breakpoint. */}
+      <div
+        className="nav__drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!open}
+        inert={open ? undefined : ''}
+      >
         <div className="nav__drawer-scroll">
           {NAV.map((n) =>
             n.type === 'link' ? (

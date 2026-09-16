@@ -3601,3 +3601,12 @@ table.stack tbody tr:nth-child(even) { background: #faf9f6; }
   font-size: 22px;
   letter-spacing: 0.02em;
 }
+
+/* Ticket 5 — reserve the cookie banner's height so a fixed bar never sits on
+   top of content on first paint. Scroll anchors get the same allowance, so a
+   jump to #comparison lands with the cards clear of the bar. */
+.has-cookie-banner body { padding-bottom: 132px; }
+.has-cookie-banner :where([id]) { scroll-margin-bottom: 148px; }
+@media (max-width: 720px) {
+  .has-cookie-banner body { padding-bottom: 190px; }
+}
