@@ -23,7 +23,8 @@ export default function TransformationOutcomes() {
           tint: true,
           eyebrow: 'The model',
           heading: 'The 40/60 risk-share fee model',
-          lede: '40% covers senior operating leadership from day one. 60% is released only as milestones are independently verified.',
+          lede: '40% is billed on time spent from kickoff. The 60% is not earned until agreed outcomes are met.',
+          link: { label: 'How the RCK Outcome Fee Model works', href: '/approach/40-60-fee-model' },
         },
         {
           type: 'points',
@@ -42,7 +43,7 @@ export default function TransformationOutcomes() {
           items: [
             { k: 'Week 1–3', h: 'Baseline lockdown', p: 'Outcomes defined and locked on a signed Baseline Schedule, measured in your GL.' },
             { k: '12–18 months', h: 'Delivery', p: 'A partner in direct operational control, executing alongside your team.' },
-            { k: 'Ongoing', h: 'Verify & release', p: 'Each milestone independently verified; the matching share of the 60% released.' },
+            { k: 'Ongoing', h: 'Verify & release', p: 'Each milestone signed off by the client sponsor; the matching share of the 60% released.' },
           ],
         },
         {

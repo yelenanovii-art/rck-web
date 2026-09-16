@@ -64,7 +64,7 @@ export default function CaseStudies() {
           <h1 className="hero__title">Verified outcomes, not testimonials.</h1>
           <p className="hero__sub">
             Representative, anonymised engagements across UK, EU and US portfolios. Each figure was
-            measured in the client&rsquo;s ledger and independently verified. Full detail available
+            measured and signed off in the client&rsquo;s ledger. Full detail available
             under NDA.
           </p>
         </div>

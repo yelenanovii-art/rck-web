@@ -9,7 +9,7 @@ const PATHS = {
     href: '/advisory',
     cta: 'Explore Deal Advisory',
     blurb:
-      'One partner-led team from diligence to value realisation, on the 40/60 model, senior operators in direct control, with 60% of the fee tied to independently verified milestones.',
+      'One partner-led team from diligence to value realisation, on the 40/60 model, senior operators in direct control, with 60% of the fee tied to sponsor-verified milestones.',
   },
   platform: {
     title: 'The TRANSFORM+ Platform',

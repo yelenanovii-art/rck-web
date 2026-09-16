@@ -13,7 +13,7 @@ const PRACTICE = [
   {
     tag: '01 · Due Diligence',
     h: 'Operational, Technology, AI & Commercial',
-    p: 'Rapid red-flag reviews and sell-side readiness that set the integration baseline before controls bite — backed by a joint venture with Baker Tilly for independent financial due diligence and assurance.',
+    p: 'Rapid red-flag reviews and sell-side readiness that set the integration baseline before controls bite.',
   },
   {
     tag: '02 · PMI',
@@ -85,35 +85,22 @@ export default function Advisory() {
         </div>
       </section>
 
-      {/* MODEL */}
-      <section className="section" id="model" style={{ background: 'linear-gradient(180deg,#fbfaf7 0%,#f2f0ea 100%)', borderBlock: '1px solid var(--line)' }}>
+      {/* MODEL — B2: one sentence, the split graphic, and a link. The
+          mechanism itself lives on /approach/40-60-fee-model. */}
+      <section className="section" id="model" style={{ background: 'linear-gradient(180deg,#fbfaf7 0%,#f2f0ea 100%)' }}>
         <div className="container">
           <SectionHead
             eyebrow="The model"
-            title="The 40/60 risk-share fee model"
-            lede="We replace time-and-materials billing with a structured model that puts our own fee at risk against the outcomes we agree with you."
+            title="The RCK Outcome Fee Model"
+            lede="40% is billed on time spent from kickoff. The 60% is billed through rolling sprints and is not earned until the agreed outcomes are met."
           />
           <div className="model-panel reveal">
             <FeeBar />
-            <div className="howworks">
-              {[
-                ['STEP 1', 'Baseline & scope', "We agree the milestones, and the starting numbers they're measured against, before the clock starts."],
-                ['STEP 2', 'Day-to-day delivery', 'The 40% covers senior operating leadership from day one, this is not a discovery-phase retainer.'],
-                ['STEP 3', 'Outcome verification', 'As each milestone is independently confirmed, the matching share of the 60% is released.'],
-              ].map(([n, h, p]) => (
-                <div className="step" key={n}>
-                  <div className="step-n">{n}</div>
-                  <h4>{h}</h4>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
           </div>
           <div className="model-cta reveal">
-            <a className="btn btn-navy btn-lg" href="/diagnostics/deal-value-modeller">
-              Model your deal in numbers <ArrowRight />
+            <a className="btn btn-navy btn-lg" href="/approach/40-60-fee-model">
+              How the RCK Outcome Fee Model works <ArrowRight />
             </a>
-            <span className="model-cta__note">See your fee-at-risk and cost of delay in about a minute.</span>
           </div>
         </div>
       </section>
@@ -252,7 +239,7 @@ export default function Advisory() {
           <div className="timeline">
             {[
               ['Days 1–5', 'Audit & align', 'Agree 3–5 value milestones against your VCP.'],
-              ['Days 6–10', 'Sign SOW', 'Single Statement of Work with independently verified baselines.'],
+              ['Days 6–10', 'Sign SOW', 'Single Statement of Work with sponsor-agreed baselines.'],
               ['Day 11+', 'Mobilise', 'Senior partner takes direct operational control.'],
               ['Ongoing', 'Verify & release', 'Milestone tranches of the 60% released as each is verified.'],
             ].map(([r, h, p], i) => (

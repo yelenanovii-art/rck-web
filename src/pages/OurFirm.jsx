@@ -25,7 +25,7 @@ export default function OurFirm() {
           items: [
             { h: 'Partner-led execution', p: 'Named, seasoned operators and interim CxOs embedded directly into your leadership team, never a subcontracted bench.' },
             { h: 'The 40/60 alignment', p: '60% of our fee is at risk against milestones verified in your ledger, not slideware.' },
-            { h: 'Independent verification', p: 'Through a joint venture with Baker Tilly, we pair partner-led execution with independent financial due diligence and assurance, so outcomes are verified by a third party, not marked by us.' },
+            { h: 'Independent assurance', p: 'Through a joint venture with Baker Tilly, independent financial due diligence and assurance are available where a mandate includes them. On every mandate, the client sponsor is the release gate.' },
             { h: 'Specialist reach', p: 'Deep execution across London, Barcelona and EMEA, spanning 9 jurisdictions, under Chatham House and verified-GL outcome standards.' },
           ],
         },

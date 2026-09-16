@@ -187,7 +187,14 @@ function Block({ block }) {
         <section className={wrap} {...anchor}>
           <div className="container">
             {head}
-            <div className="model-panel reveal"><FeeBar /></div>
+            <div className="model-panel reveal"><FeeBar full={block.full} /></div>
+            {block.link && (
+              <p className="reveal" style={{ marginTop: 18 }}>
+                <a className="link-arrow" href={block.link.href}>
+                  {block.link.label} <ArrowRight />
+                </a>
+              </p>
+            )}
           </div>
         </section>
       )

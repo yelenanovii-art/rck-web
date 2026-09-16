@@ -11,7 +11,7 @@ const META = {
   },
   '/advisory': {
     t: 'Deal Advisory & Interim Execution',
-    d: 'The 40/60 risk-share model: senior partners in direct operational control, with 60% of our fee tied to independently verified milestones.',
+    d: 'The 40/60 risk-share model: senior partners in direct operational control, with 60% of our fee tied to sponsor-verified milestones.',
   },
   '/products/transform-plus': {
     t: 'TRANSFORM+ — Strategy-to-Value Execution Platform',
@@ -54,7 +54,7 @@ const META = {
   },
   '/case-studies': {
     t: 'Case Studies: Verified M&A Outcomes',
-    d: 'Representative, anonymised engagements, each measured in the client’s ledger and independently verified. Detail available under NDA.',
+    d: 'Representative, anonymised engagements, each measured and signed off in the client’s ledger. Detail available under NDA.',
     k: 'case studies, M&A results, verified outcomes',
   },
   '/the-outcome-circle': {

@@ -6,7 +6,7 @@
  *   • Time-based fee (40%)  — billed as delivered, day-rate basis, regardless of outcome.
  *   • Outstanding fee (60%) — fixed at signing against the TARGET; released in equal
  *                             tranches at each 8-week sprint checkpoint, only for
- *                             sprints whose target is independently verified.
+ *                             sprints whose target is signed off by the client sponsor.
  *
  * Critical: this is NOT gain-share. RCK never receives more than the fee agreed at
  * signing, however much value a programme actually creates. Never recompute the
@@ -129,7 +129,7 @@ export const COPY = {
   outcomeFeeHint:
     'Sets the size of the outstanding 60% at signing, released in equal tranches at each 8-week sprint checkpoint — fixed from that point, not a share that grows with results.',
   outstandingFeeSub:
-    'The remaining 60% of the agreed fee, released in tranches at each sprint checkpoint once independently verified — not an additional share of value created.',
+    'The remaining 60% of the agreed fee, released in tranches at each sprint checkpoint once the client sponsor signs off — not an additional share of value created.',
   totalFeeCaption:
     'The full agreed fee. RCK never receives more than this, however much value the programme actually creates.',
   downside: (totalFeeFormatted) =>
@@ -137,7 +137,7 @@ export const COPY = {
   checkpointsIntro:
     "The outstanding fee doesn't wait for one lump verification at programme end — it releases sprint by sprint. Toggle a checkpoint off to simulate a missed sprint.",
   contingencyIntro:
-    'How much of each fee is only paid out if the outcome is independently verified — not a share of any upside, just whether the outstanding portion is paid at all.',
+    'How much of each fee is only paid out once the outcome is signed off by the client sponsor — not a share of any upside, just whether the outstanding portion is paid at all.',
   contingencyNote:
     "Not gain-share: RCK's fee is fixed at signing either way. This is the share of that fixed fee RCK stands to lose, sprint by sprint, if outcomes are never verified — not a bigger share of anything if it over-delivers.",
   benchmarkNote:

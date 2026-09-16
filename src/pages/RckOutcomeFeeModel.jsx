@@ -50,6 +50,7 @@ export default function RckOutcomeFeeModel() {
         // ── 3. Contract spec + composition (tickets 10, 11) ─────────────────
         {
           type: 'feebar',
+          full: true, // B2 — the canonical page is the one place this may be full
           tint: true,
           eyebrow: 'Composition',
           heading: 'How the fee is composed',
