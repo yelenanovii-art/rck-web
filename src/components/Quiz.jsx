@@ -183,7 +183,7 @@ export default function Quiz() {
               <p>
                 {result.path === 'platform'
                   ? 'Scoped to your programme, deployed on your existing systems.'
-                  : '40% retained baseline, 60% tied to independently verified milestones. If we miss, you don’t pay the 60%.'}
+                  : '40% billed on time spent, 60% released only once acceptance criteria are met. If criteria are unmet, the 60%.'}
               </p>
               {packageFor(result) && result.path !== 'platform' && (
                 <p className="report-card__aside">Platform option: {packageFor(result)}</p>

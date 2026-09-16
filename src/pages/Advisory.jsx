@@ -139,7 +139,7 @@ export default function Advisory() {
               </thead>
               <tbody>
                 {[
-                  ['Commercial structure', '100% time & materials', 'Fixed day rates, minor bonus', '40% baseline / 60% performance-tied'],
+                  ['Commercial structure', '100% time & materials', 'Fixed day rates, minor bonus', '40% on time spent / 60% performance-tied'],
                   ['Contract structure', 'Separate contracts across diligence, integration, exit firms', 'One firm for delivery, disconnected from diligence', 'Single contract, diligence to value realisation'],
                   ['Team seniority', 'Partner-sold, junior-delivered', 'Delivery team assigned after diligence closes', 'Senior partner in direct operational control from day one'],
                   ['Deployment speed', 'Weeks of onboarding and discovery', 'Standard agency lead times', 'Senior leader in seat in Week 1'],

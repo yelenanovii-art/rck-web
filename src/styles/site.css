@@ -2147,8 +2147,8 @@ table.stack tbody tr:nth-child(even) { background: #faf9f6; }
 }
 .dualtrack__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
   margin-top: 44px;
 }
 .track-card {

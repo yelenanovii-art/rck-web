@@ -11,11 +11,11 @@ export default function FeeBar() {
       <div className="feebar">
         <div className="feebar__seg feebar__seg--base">
           <span className="feebar__pct">40%</span>
-          <span className="feebar__lbl">Retained baseline</span>
+          <span className="feebar__lbl">Billed on time spent</span>
         </div>
         <div className="feebar__seg feebar__seg--out">
           <span className="feebar__pct">60%</span>
-          <span className="feebar__lbl">Performance-tied</span>
+          <span className="feebar__lbl">Released against outcomes</span>
         </div>
       </div>
       <div className="feebar-caption">

@@ -7,7 +7,6 @@ import { ArrowRight, Check } from '../components/Icons'
 const STATS = [
   ['200+', 'Vetted C-Suite Bench'],
   ['£4.5B+', 'Value Supported'],
-  ['40/60', 'Outcome Fee Alignment'],
 ]
 
 const PILLARS = [
@@ -169,8 +168,8 @@ export default function OutcomeCircle() {
           <div className="oc-hero__copy">
             <p className="oc-badge">An invitation-only operator collective</p>
             <h1 className="oc-h1">
-              The Outcome Circle™: Where Elite Interim CxOs and PE Operators Execute with{' '}
-              <em>Skin in the Game</em>.
+              The Outcome Circle™: A Curated Collective of Elite Interim CxOs and{' '}
+              <em>PE Operators</em>.
             </h1>
             <p className="oc-lead">
               We do not operate a generalist talent pool or an unvetted recruitment database. The
