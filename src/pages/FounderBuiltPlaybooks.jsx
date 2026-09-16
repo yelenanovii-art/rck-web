@@ -51,7 +51,7 @@ export default function FounderBuiltPlaybooks() {
         eyebrow: 'Proven, not theoretical',
         title: 'Put a proven playbook, and the operator who wrote it, on your deal.',
         copy: 'Not a template applied by juniors. The people who lived it, executing alongside you.',
-        secondary: { label: 'Explore Deal Advisory', href: '/advisory' },
+        secondary: { label: 'How We Work', href: '/advisory' },
       }}
     />
   )

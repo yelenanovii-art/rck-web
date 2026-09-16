@@ -32,7 +32,7 @@ export default function Platform() {
       <section className="hero hero--platform">
         <div className="container hero__inner">
           <div className="hero__copy">
-            <p className="eyebrow eyebrow--light">TRANSFORM+ Execution Platform</p>
+            <p className="eyebrow eyebrow--light">TRANSFORM+</p>
             <h1 className="hero__title">The Execution OS Built Directly into Your Business Intelligence Layer.</h1>
             <p className="hero__sub">
               Not a disconnected SaaS tool. TRANSFORM+ embeds pre-configured milestone governance,
@@ -326,7 +326,7 @@ export default function Platform() {
         title="Ready to turn strategic intent into sealed value?"
         copy="Join the enterprises, PE sponsors and transformation leaders running their execution spine on TRANSFORM+."
         primary={{ label: 'Book your TRANSFORM+ briefing', href: '/contact' }}
-        secondary={{ label: 'Talk to deal advisory', href: '/advisory' }}
+        secondary={{ label: 'How We Work', href: '/advisory' }}
       />
     </>
   )

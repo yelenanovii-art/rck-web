@@ -10,11 +10,11 @@ const META = {
     d: '40% fixed + 60% outcome-at-risk fee model. Partner-led execution where results drive revenue. 85%+ hit target outcomes.',
   },
   '/advisory': {
-    t: 'Deal Advisory & Interim Execution',
+    t: 'How We Work',
     d: 'The 40/60 risk-share model: senior partners in direct operational control, with 60% of our fee tied to sponsor-verified milestones.',
   },
   '/products/transform-plus': {
-    t: 'TRANSFORM+ — Strategy-to-Value Execution Platform',
+    t: 'TRANSFORM+',
     d: 'An independently verifiable trail from deal thesis to realised EBITDA — stage-gate controls and a cryptographically sealed audit trail at every decision point.',
   },
   '/diagnostics/value-at-risk': {

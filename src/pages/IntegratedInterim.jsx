@@ -60,7 +60,7 @@ export default function IntegratedInterim() {
         eyebrow: 'One firm, one contract',
         title: 'Get PMI strategy and interim leadership from one team.',
         copy: 'One accountability structure from diligence to value realisation. No seam to manage.',
-        secondary: { label: 'Explore Deal Advisory', href: '/advisory' },
+        secondary: { label: 'How We Work', href: '/advisory' },
       }}
     />
   )

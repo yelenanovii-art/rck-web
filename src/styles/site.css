@@ -3590,3 +3590,14 @@ table.stack tbody tr:nth-child(even) { background: #faf9f6; }
 
 /* Hero CTA on content pages (ticket 17). */
 .hero__cta { margin: 22px 0 0; }
+
+/* Initials avatar where a headshot has not been supplied (ticket E4). */
+.team-avatar--initials {
+  display: grid;
+  place-items: center;
+  background: var(--navy-700);
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}

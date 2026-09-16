@@ -16,7 +16,7 @@ const FIELD_DEFS = {
     label: 'I’m interested in',
     type: 'select',
     options: [
-      ['advisory', 'Deal Advisory & Interim Execution'],
+      ['advisory', 'The RCK Outcome Fee Model'],
       ['platform', 'TRANSFORM+ Platform'],
       ['both', 'Both advisory and platform'],
     ],

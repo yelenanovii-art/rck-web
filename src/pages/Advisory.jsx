@@ -40,7 +40,7 @@ export default function Advisory() {
       {/* HERO */}
       <section className="hero hero--sub">
         <div className="container hero__inner">
-          <p className="eyebrow eyebrow--light">Deal Advisory &amp; Interim Execution</p>
+          <p className="eyebrow eyebrow--light">How We Work</p>
           <h1 className="hero__title">Stop paying for slide decks. Start paying for outcomes.</h1>
           <p className="hero__sub">
             Partner-led deal advisory and interim execution, one team, one contract, from diligence

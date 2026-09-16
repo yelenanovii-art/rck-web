@@ -115,7 +115,7 @@ function Block({ block }) {
               {block.items.map((it, k) => (
                 <div className="problem-card reveal" style={{ '--delay': `${k * 80}ms` }} key={k}>
                   <div className="num">{it.n || k + 1}</div>
-                  <h3>{it.h}</h3>
+                  <h3 id={it.anchor || undefined}>{it.h}</h3>
                   <p>{rich(it.p)}</p>
                 </div>
               ))}
@@ -150,7 +150,7 @@ function Block({ block }) {
               {block.items.map((it, k) => (
                 <div className="tstep reveal" style={{ '--delay': `${k * 70}ms` }} key={k}>
                   <div className="trange">{it.k}</div>
-                  <h4>{it.h}</h4>
+                  <h4 id={it.anchor || undefined}>{it.h}</h4>
                   <p>{it.p}</p>
                 </div>
               ))}

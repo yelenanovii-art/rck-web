@@ -5,7 +5,7 @@ import { ArrowRight, Check } from './Icons'
 
 const PATHS = {
   advisory: {
-    title: 'Partner-led Deal Advisory & Interim Execution',
+    title: 'The RCK Outcome Fee Model',
     href: '/advisory',
     cta: 'Explore Deal Advisory',
     blurb:

@@ -51,10 +51,7 @@ export default function Footer() {
           </div>
           <div className="footer__col">
             <h4>Interim &amp; Operators</h4>
-            <a href="/services/interim-management">Interim CFO &amp; Finance</a>
-            <a href="/services/interim-management">Interim COO &amp; Operations</a>
-            <a href="/services/interim-management">Interim CIO &amp; Tech Cutover</a>
-            <a href="/services/interim-management">Interim CTrO &amp; Programme</a>
+            <a href="/services/interim-management">Interim operators</a>
             <a href="/the-outcome-circle">The Outcome Circle™</a>
           </div>
           <div className="footer__col">
@@ -62,7 +59,7 @@ export default function Footer() {
             <a href="/diagnostics/deal-value-modeller">Deal Value Modeller</a>
             <a href="/diagnostics/value-at-risk">Value-at-Risk Assessment</a>
             <a href="/diagnostics/readiness-score">RCK Readiness Score</a>
-            <a href="/products/transform-plus">TRANSFORM+ Execution OS</a>
+            <a href="/products/transform-plus">TRANSFORM+</a>
             <a href="/resources/playbooks">Outcomes-Based PMI Playbook</a>
           </div>
         </div>

@@ -4,7 +4,7 @@
 // label to drift out of sync with the nav/H1 (P3-4 / TASK-26).
 const TITLES = {
   '/': 'Home',
-  '/advisory': 'Deal Advisory & Interim Execution',
+  '/advisory': 'How We Work',
   '/about/partner-led-model': 'Why Partner-Led Beats Matrix',
   '/approach/40-60-fee-model': 'The RCK Outcome Fee Model',
   '/about/team': 'Meet the Partners',

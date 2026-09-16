@@ -27,16 +27,15 @@ const NAV = [
       {
         heading: 'Interim Leadership (CxO Bench)',
         items: [
-          { to: '/services/interim-management', label: 'Interim CFO & Finance Ops' },
-          { to: '/services/interim-management', label: 'Interim COO & Operations' },
-          { to: '/services/interim-management', label: 'Interim CIO/CTO & Tech' },
-          { to: '/services/interim-management', label: 'Interim CTrO & Programme Leadership' },
+          // Ticket 20 — one item, not four links to the same page. The CFO, COO,
+          // CIO and CTrO roles are anchors on the destination.
+          { to: '/services/interim-management#interim-cfo', label: 'Interim operators', desc: 'CFO, COO, CIO/CTO and CTrO' },
         ],
       },
       {
         heading: 'Products & Diagnostics',
         items: [
-          { to: '/products/transform-plus', label: 'TRANSFORM+ Execution Platform' },
+          { to: '/products/transform-plus', label: 'TRANSFORM+' },
           { to: '/diagnostics/deal-value-modeller', label: 'Deal Value Modeller' },
           { to: '/diagnostics/value-at-risk', label: 'Value-at-Risk Assessment' },
           { to: '/diagnostics/readiness-score', label: 'RCK Readiness Score' },
@@ -56,7 +55,6 @@ const NAV = [
       { to: '/advisory', label: 'How We Work' },
       { to: '/about/partner-led-model', label: 'Why Partner-Led Beats Matrix' },
       { to: '/services/integrated-interim', label: 'Why Interim Should Be Integrated' },
-      { to: '/about/founder-built-playbooks', label: 'Founder-Built Playbooks' },
     ],
   },
   {
@@ -73,7 +71,9 @@ const NAV = [
     label: 'About Us',
     items: [
       { to: '/about/our-firm', label: 'About RCK' },
-      { to: '/about/team', label: 'Meet Our Team' },
+      // E3 / Section 0.4 — this destination is always "Managing Partners".
+      { to: '/about/team', label: 'Managing Partners' },
+      { to: '/about/founder-built-playbooks', label: 'Founder-Built Playbooks' },
       { to: '/contact', label: 'Contact' },
     ],
   },

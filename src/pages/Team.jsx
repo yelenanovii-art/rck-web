@@ -39,7 +39,10 @@ function Avatar({ src, name, linkedin }) {
           <img src={src} alt={name} loading="lazy" onError={() => setOk(false)} />
         </div>
       ) : (
-        <div className="team-avatar team-avatar--empty" role="img" aria-label={`${name}, photo to follow`}>
+        <div className="team-avatar team-avatar--initials" role="img" aria-label={name}>
+          <span aria-hidden="true">
+            {name.split(' ').filter(Boolean).slice(0, 2).map((w) => w[0]).join('')}
+          </span>
           <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="8.5" r="3.6" stroke="currentColor" strokeWidth="1.5" />
             <path d="M5 19c0-3.6 3.1-5.8 7-5.8s7 2.2 7 5.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />

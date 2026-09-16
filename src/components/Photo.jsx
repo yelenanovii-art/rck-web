@@ -6,6 +6,12 @@
 //
 // Drop real files into `public/photos/` and pass `src="/photos/<file>"`.
 export default function Photo({ src, alt = '', ratio = '4 / 3', suggest, tone = 'light', className = '' }) {
+  // Ticket E4 — no placeholder text may be reachable on production. With no
+  // image supplied the module is omitted entirely rather than shipping "Photo
+  // to follow"; in dev the placeholder still renders, so the slot stays visible
+  // to whoever is meant to fill it.
+  if (!src && !import.meta.env.DEV) return null
+
   return (
     <figure className={`photo photo--${tone} ${className}`} style={{ '--ratio': ratio }}>
       {src ? (
