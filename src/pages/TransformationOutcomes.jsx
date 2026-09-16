@@ -59,7 +59,7 @@ export default function TransformationOutcomes() {
         },
         {
           type: 'seealso',
-          links: [{ text: 'The 40/60 Fee Model', href: '/about/outcomes-vs-advisory' }],
+          links: [{ text: 'The RCK Outcome Fee Model', href: '/approach/40-60-fee-model' }],
         },
       ]}
       cta={{

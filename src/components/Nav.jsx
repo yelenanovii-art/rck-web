@@ -52,7 +52,7 @@ const NAV = [
     items: [
       // The 40/60 model leads: it is the defining commercial proposition, so it
       // sits above the general "how we work" page rather than under it.
-      { to: '/about/outcomes-vs-advisory', label: 'The 40/60 Fee Model' },
+      { to: '/approach/40-60-fee-model', label: 'The RCK Outcome Fee Model' },
       { to: '/advisory', label: 'How We Work' },
       { to: '/about/partner-led-model', label: 'Why Partner-Led Beats Matrix' },
       { to: '/services/integrated-interim', label: 'Why Interim Should Be Integrated' },

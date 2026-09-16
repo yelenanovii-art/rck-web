@@ -133,7 +133,7 @@ export const COPY = {
   totalFeeCaption:
     'The full agreed fee. RCK never receives more than this, however much value the programme actually creates.',
   downside: (totalFeeFormatted) =>
-    `Each sprint's tranche is independent. Miss a checkpoint and RCK forfeits only that sprint's slice of the outstanding fee — not the whole ${totalFeeFormatted} at once.`,
+    `Each sprint's tranche is independent. Miss a checkpoint and RCK does not earn that sprint's slice of the outstanding fee — not the whole ${totalFeeFormatted} at once.`,
   checkpointsIntro:
     "The outstanding fee doesn't wait for one lump verification at programme end — it releases sprint by sprint. Toggle a checkpoint off to simulate a missed sprint.",
   contingencyIntro:

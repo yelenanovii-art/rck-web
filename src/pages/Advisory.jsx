@@ -142,7 +142,7 @@ export default function Advisory() {
                   ['Commercial structure', '100% time & materials', 'Fixed day rates, minor bonus', '40% baseline / 60% performance-tied'],
                   ['Contract structure', 'Separate contracts across diligence, integration, exit firms', 'One firm for delivery, disconnected from diligence', 'Single contract, diligence to value realisation'],
                   ['Team seniority', 'Partner-sold, junior-delivered', 'Delivery team assigned after diligence closes', 'Senior partner in direct operational control from day one'],
-                  ['Deployment speed', 'Weeks of onboarding and discovery', 'Standard agency lead times', 'Senior leader mobilised within 72 hours'],
+                  ['Deployment speed', 'Weeks of onboarding and discovery', 'Standard agency lead times', 'Senior leader in seat in Week 1'],
                   ['Delivery risk', 'Borne entirely by the client', 'Shared only if separately negotiated', 'Structurally shared through the fee model itself'],
                 ].map(([label, a, b, c]) => (
                   <tr key={label}>
@@ -179,7 +179,7 @@ export default function Advisory() {
             <div className="practice-card full reveal">
               <div className="tag">05 · Interim Management &amp; CxO Bench</div>
               <h3>Fractional or full-time CFO / COO / CIO / CTrO</h3>
-              <p>Senior leaders from our own network, deployed within 72 hours, never sub-contracted.</p>
+              <p>Senior leaders from our own network, in seat in Week 1, never sub-contracted.</p>
               <div className="milestone">$250M pharma carve-out completed across 7 sites, zero contractual penalties</div>
             </div>
           </div>

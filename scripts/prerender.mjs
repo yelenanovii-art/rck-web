@@ -12,7 +12,7 @@ import { join } from 'node:path'
 
 const ROUTES = [
   '/', '/advisory', '/products/transform-plus', '/diagnostics/value-at-risk', '/diagnostics/readiness-score', '/diagnostics/deal-value-modeller', '/contact',
-  '/about/team', '/about/partner-led-model', '/about/outcomes-vs-advisory',
+  '/about/team', '/about/partner-led-model', '/approach/40-60-fee-model',
   '/about/founder-built-playbooks', '/services/transformation-outcomes',
   '/services/interim-management', '/services/integrated-interim',
   '/resources/playbooks', '/case-studies', '/the-outcome-circle',

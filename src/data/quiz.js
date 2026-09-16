@@ -60,7 +60,7 @@ export const QUESTIONS = [
     id: 'urgency',
     q: 'How soon do you need senior execution support?',
     options: [
-      { label: 'Immediately, within 72 hours', v: 'now', paths: ['advisory'], score: 3, urgent: true },
+      { label: 'Immediately — this week', v: 'now', paths: ['advisory'], score: 3, urgent: true },
       { label: 'This quarter', v: 'quarter', score: 2 },
       { label: 'Exploring options', v: 'explore', score: 1 },
       { label: 'Just researching', v: 'research', score: 0 },

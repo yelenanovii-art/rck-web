@@ -7,7 +7,7 @@ import { POSTS, formatDate } from '../lib/posts'
 // evergreen model/service pages that pair with the articles.
 const MORE = [
   { tag: 'Model', h: 'Why partner-led beats matrix', href: '/about/partner-led-model' },
-  { tag: 'Model', h: 'The 40/60 fee model & verification', href: '/about/outcomes-vs-advisory' },
+  { tag: 'Model', h: 'The 40/60 fee model & verification', href: '/approach/40-60-fee-model' },
   { tag: 'Service', h: 'Why interim should be integrated', href: '/services/integrated-interim' },
   { tag: 'Playbooks', h: 'Founder-built playbooks', href: '/about/founder-built-playbooks' },
   { tag: 'Proof', h: 'Case studies: verified outcomes', href: '/case-studies' },

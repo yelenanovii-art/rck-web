@@ -232,7 +232,7 @@ export default function DealModeller() {
                         </button>
                         <span className="ckpt__amt tab-num">
                           <span className="ckpt__tranche">{fmt(s.outstandingTranche)}</span>
-                          <span className="ckpt__state">{on ? 'verified · released' : 'missed · forfeited'}</span>
+                          <span className="ckpt__state">{on ? 'verified · released' : 'criteria unmet · not earned'}</span>
                         </span>
                       </li>
                     )
@@ -270,7 +270,7 @@ export default function DealModeller() {
               <p className="res__compare">
                 Every 8-week sprint you wait ≈ <b>{fmt(perSprint)}</b> of leaked value — the same
                 cadence RCK releases fee tranches on, paid only against verified outcomes. A senior
-                partner mobilises within 72 hours (~<b>{fmtFull(perDay * 3)}</b> of exposure), not
+                partner is in seat in Week 1 (~<b>{fmtFull(perDay * 3)}</b> of exposure), not
                 months.
               </p>
               <p className="modeller__assump" style={{ marginTop: 14 }}>

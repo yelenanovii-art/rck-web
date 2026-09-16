@@ -5,7 +5,7 @@ import { ArrowRight } from '../components/Icons'
 const LINKS = [
   ['/services/deal-advisory-carve-outs', 'Deal Advisory & Carve-Outs'],
   ['/services/interim-management', 'Interim & Fractional Leadership'],
-  ['/about/outcomes-vs-advisory', 'The 40/60 Outcome Model'],
+  ['/approach/40-60-fee-model', 'The RCK Outcome Fee Model'],
   ['/case-studies', 'Case Studies'],
   ['/insights', 'Insights'],
   ['/about/team', 'Meet the Partners'],

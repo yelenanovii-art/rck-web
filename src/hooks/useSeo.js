@@ -44,7 +44,7 @@ const META = {
   },
   '/services/interim-management': {
     t: 'Board-Ready Interim CxO Leadership',
-    d: 'Battle-tested interim CFO, COO, CIO/CTO and CTrO deployed in operational control within 72 hours, on milestone-based compensation. Published £8K–£25K/month all-in.',
+    d: 'Battle-tested interim CFO, COO, CIO/CTO and CTrO in operational control in Week 1, on milestone-based compensation. Published £8K–£25K/month all-in.',
     k: 'interim management, interim CFO, interim COO, interim CIO, CTrO, CxO bench',
   },
   '/resources/playbooks': {
@@ -74,7 +74,7 @@ const META = {
   },
   '/services/restructuring-turnaround': {
     t: 'Restructuring & Operational Turnaround',
-    d: 'Rapid liquidity stabilisation, cash governance and operational recovery. Managing Partners and in-seat COOs deployed within 72 hours.',
+    d: 'Rapid liquidity stabilisation, cash governance and operational recovery. Managing Partners and in-seat COOs in seat in Week 1.',
     k: 'restructuring, turnaround, working capital, distressed, interim COO',
   },
   '/services/erp-enterprise-applications': {
@@ -103,10 +103,10 @@ const META = {
     d: 'Partner-led vs matrix structure: how 7 named partners outperform 350-person firms on accountability, speed and outcomes.',
     k: 'partner-led, matrix, accountability, boutique vs big firm',
   },
-  '/about/outcomes-vs-advisory': {
-    t: 'The 40/60 Fee Model & How Outcomes Are Verified',
-    d: "RCK's 40% fixed + 60% outcome-at-risk model, verified in your GL with CFO or auditor sign-off. Why fee alignment changes outcomes.",
-    k: 'outcome-at-risk, fee model, GL verification, CFO sign-off',
+  '/approach/40-60-fee-model': {
+    t: 'The RCK Outcome Fee Model',
+    d: '40% billed on time spent from kickoff; 60% billed through rolling sprints and released only against outcomes verified in your General Ledger.',
+    k: 'outcome fee model, 40/60, GL verification, fee at risk',
   },
   '/services/integrated-interim': {
     t: 'Why Interim Should Be Integrated',
@@ -172,7 +172,7 @@ const PAGE_SCHEMA_OWNERS = {
 // Editorial / thought-leadership pages get og:type=article.
 const ARTICLE_PATHS = new Set([
   '/about/partner-led-model',
-  '/about/outcomes-vs-advisory',
+  '/approach/40-60-fee-model',
   '/about/founder-built-playbooks',
   '/services/integrated-interim',
 ])

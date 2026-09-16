@@ -30,7 +30,7 @@ export default function FeeBar() {
         <p>
           <strong>Every outcome</strong>, whether a TSA exit date, operating-model transition,
           synergy realisation, or target financial metric, is pegged to an objective baseline agreed
-          during scoping. If the defined outcome is missed, the 60% is deferred until it is secured.
+          during scoping. The 60% is not earned until those acceptance criteria are met.
         </p>
       </div>
     </div>

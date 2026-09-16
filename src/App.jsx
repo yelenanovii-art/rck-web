@@ -16,7 +16,7 @@ import ReadinessScore from './pages/ReadinessScore'
 import Calculator from './pages/Calculator'
 import Contact from './pages/Contact'
 import PartnerLedModel from './pages/PartnerLedModel'
-import OutcomesVsAdvisory from './pages/OutcomesVsAdvisory'
+import RckOutcomeFeeModel from './pages/RckOutcomeFeeModel'
 import IntegratedInterim from './pages/IntegratedInterim'
 import FounderBuiltPlaybooks from './pages/FounderBuiltPlaybooks'
 import Team from './pages/Team'
@@ -56,7 +56,7 @@ const ROUTES = {
   '/cookies': CookiePolicy,
   // "Why RCK" content pages (consolidated from 6 → 4)
   '/about/partner-led-model': PartnerLedModel,
-  '/about/outcomes-vs-advisory': OutcomesVsAdvisory,
+  '/approach/40-60-fee-model': RckOutcomeFeeModel,
   '/services/integrated-interim': IntegratedInterim,
   '/about/founder-built-playbooks': FounderBuiltPlaybooks,
   // Services
@@ -81,8 +81,10 @@ const ROUTES = {
 
 // Old URLs redirected to their canonical page so nothing 404s.
 const REDIRECTS = {
+  // Ticket 2 — the fee page moved to match its canonical name.
+  '/about/outcomes-vs-advisory': '/approach/40-60-fee-model',
   '/about/why-smaller-beats-bigger': '/about/partner-led-model',
-  '/services/outcomes-verification': '/about/outcomes-vs-advisory',
+  '/services/outcomes-verification': '/approach/40-60-fee-model',
   '/outcome-circle': '/the-outcome-circle',
   // Phase 2/3 relocations
   '/transform-plus': '/products/transform-plus',
@@ -91,7 +93,7 @@ const REDIRECTS = {
   '/resources/playbook': '/resources/playbooks',
   '/resources/case-studies': '/case-studies',
   '/about/partners': '/about/team',
-  '/about/40-60-outcome-model': '/about/outcomes-vs-advisory',
+  '/about/40-60-outcome-model': '/approach/40-60-fee-model',
   // Legal aliases → canonical legal pages
   '/legal-notice': '/legal',
   '/aviso-legal': '/legal',

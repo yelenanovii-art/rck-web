@@ -192,7 +192,7 @@ export default function Quiz() {
             <div className="report-card">
               <h4>{result.urgent ? 'Priority, move now' : 'Your next step'}</h4>
               <p className="report-card__title">
-                {result.urgent ? 'Senior partner mobilised within 72 hours' : 'A 30-minute partner strategy call'}
+                {result.urgent ? 'Senior partner in seat in Week 1' : 'A 30-minute partner strategy call'}
               </p>
               <p>We’ve emailed this report to you. A partner will follow up within one business day to pressure-test it.</p>
               <a className="btn btn-navy" href="/contact">Book a strategy call <ArrowRight /></a>

@@ -1,3 +1,8 @@
+# ── Ticket 2 — the fee page moved to match its canonical name ────────────────
+/about/outcomes-vs-advisory  /approach/40-60-fee-model  301!
+/about/40-60-outcome-model   /approach/40-60-fee-model  301!
+/services/outcomes-verification  /approach/40-60-fee-model  301!
+
 # ── Old Wix URLs → their equivalents here ────────────────────────────────────
 # The previous site (www.rckpm.es, Wix) had 16 indexed pages plus three copies
 # of a demo "news" collection. Those URLs keep their search equity only if they

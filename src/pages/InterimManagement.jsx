@@ -5,7 +5,7 @@ export default function InterimManagement() {
   return (
     <ContentPage
       eyebrow="Interim Leadership · CxO Bench"
-      title="Senior Operators in Operational Control Within 72 Hours, Full Skin in the Game."
+      title="Senior Operators in Operational Control in Week 1."
       dek="RCK does not operate a passive executive search database. We deploy battle-tested, board-ready interim executives equipped with TRANSFORM+ playbooks and aligned to milestone-based compensation."
       meta="48-hour identification · Week 1 deployment · 9 jurisdictions"
       blocks={[
@@ -51,7 +51,7 @@ export default function InterimManagement() {
       cta={{
         eyebrow: 'Deploy in Week 1',
         title: 'Check CxO availability.',
-        copy: '72-hour response on a pre-vetted, board-ready interim leader matched to your situation.',
+        copy: 'A pre-vetted, board-ready interim leader identified within 48 hours and matched to your situation.',
         primary: { label: 'Check CxO Availability', href: '/contact' },
         secondary: { label: 'Request Redacted Operator Profiles (NDA)', href: '/contact' },
       }}

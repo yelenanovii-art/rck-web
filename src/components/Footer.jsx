@@ -47,7 +47,7 @@ export default function Footer() {
             <a href="/services/value-creation-cost-transformation">Value Creation &amp; Cost Transformation</a>
             <a href="/services/restructuring-turnaround">Restructuring &amp; Turnaround</a>
             <a href="/services/erp-enterprise-applications">ERP &amp; Enterprise Applications</a>
-            <a href="/about/outcomes-vs-advisory">The 40/60 Commercial Model</a>
+            <a href="/approach/40-60-fee-model">The RCK Outcome Fee Model</a>
           </div>
           <div className="footer__col">
             <h4>Interim &amp; Operators</h4>

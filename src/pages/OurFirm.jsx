@@ -15,7 +15,7 @@ export default function OurFirm() {
           heading: 'Named partners, in seat, on the line',
           body: [
             'RCK was built by operators who had run integrations, carve-outs and turnarounds from inside the business, and had watched value leak every time strategy was handed from a partner to a junior bench. So we removed the pyramid: every engagement is led by a named Managing Partner in direct operational control, capped at 3 to 4 concurrent mandates.',
-            'And we changed how we are paid. 40% of our fee is fixed; 60% is earned only when outcomes are verified in your General Ledger. When you miss, we forfeit. That single mechanic aligns our economics with yours from day one.',
+            'And we changed how we are paid. 40% of our fee is billed on time spent from kickoff; the remaining 60% is not earned until outcomes are verified in your General Ledger. That single mechanic aligns our economics with yours from day one.',
           ],
         },
         {

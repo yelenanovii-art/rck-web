@@ -90,8 +90,8 @@ const PAGES = {
   restructuring: {
     eyebrow: 'Advisory & Transformation',
     title: 'Rapid Liquidity Stabilisation, Cash Governance, and Operational Recovery.',
-    dek: 'Immediate deployment of Managing Partners and in-seat COOs within 72 hours to stabilise distressed assets, protect covenants, and recover working capital.',
-    meta: '72-hour deployment · in-seat COO bench',
+    dek: 'Managing Partners and in-seat COOs in seat in Week 1 to stabilise distressed assets, protect covenants, and recover working capital.',
+    meta: 'In seat in Week 1 · in-seat COO bench',
     blocks: [
       {
         type: 'checklist',
@@ -114,9 +114,9 @@ const PAGES = {
     ],
     cta: {
       eyebrow: 'Move now',
-      title: 'Request a 72-hour rapid intervention.',
+      title: 'Request a rapid intervention.',
       copy: 'A direct partner line for distressed and time-critical situations.',
-      primary: { label: 'Request 72-Hour Rapid Intervention', href: '/contact' },
+      primary: { label: 'Request a Rapid Intervention', href: '/contact' },
       secondary: { label: 'Download the Cash Governance Framework', href: '/resources/playbooks' },
     },
   },
@@ -252,7 +252,7 @@ const PAGES = {
     cta: {
       eyebrow: 'Execution capacity',
       title: 'Check delivery-team availability.',
-      copy: '72-hour response on embedded programme and functional leadership.',
+      copy: 'Candidates identified within 48 hours on embedded programme and functional leadership.',
       primary: { label: 'Check Delivery Team Availability', href: '/contact' },
       secondary: { label: 'Speak with an Interim CIO', href: book },
     },

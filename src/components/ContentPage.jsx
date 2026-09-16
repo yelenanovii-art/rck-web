@@ -16,15 +16,36 @@ function rich(text) {
 // rendered by <Block>. All blocks reuse the site's existing component styles so
 // these pages stay visually consistent with the rest of the site, animate on
 // scroll, and are responsive by default.
-export default function ContentPage({ eyebrow, title, dek, meta, blocks = [], cta }) {
+export default function ContentPage({ eyebrow, title, subhead, dek, meta, breadcrumb, heroCta, blocks = [], cta }) {
   return (
     <>
       <section className="hero hero--sub hero--article">
         <div className="container hero__inner">
+          {breadcrumb && (
+            <nav className="crumb" aria-label="Breadcrumb">
+              <ol>
+                {breadcrumb.map((c, i) => (
+                  <li key={c.href || c.label}>
+                    {c.href ? <a href={c.href}>{c.label}</a> : <span aria-current="page">{c.label}</span>}
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
           <p className="eyebrow eyebrow--light">{eyebrow}</p>
           <h1 className="hero__title">{title}</h1>
+          {/* A claim that used to be the H1 can live on as a subhead, so the
+              page keeps the line without competing for the primary heading. */}
+          {subhead && <p className="hero__subhead">{subhead}</p>}
           {dek && <p className="hero__sub">{dek}</p>}
           {meta && <div className="hero__meta">{meta}</div>}
+          {heroCta && (
+            <p className="hero__cta">
+              <a className="btn btn-gold" href={heroCta.href}>
+                {heroCta.label} <ArrowRight />
+              </a>
+            </p>
+          )}
         </div>
       </section>
 
@@ -39,6 +60,8 @@ export default function ContentPage({ eyebrow, title, dek, meta, blocks = [], ct
 
 function Block({ block }) {
   const wrap = `section ${block.tint ? 'section--paper' : ''}`
+  // Ticket 17 — an id makes the block addressable by an in-page CTA.
+  const anchor = block.id ? { id: block.id } : {}
   const head = (block.eyebrow || block.heading || block.lede) && (
     <SectionHead eyebrow={block.eyebrow} title={block.heading} lede={block.lede} />
   )
@@ -46,7 +69,7 @@ function Block({ block }) {
   switch (block.type) {
     case 'prose':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             {head}
             {block.body && (
@@ -60,7 +83,7 @@ function Block({ block }) {
 
     case 'compare':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             {head}
             <Disclose label="See the side-by-side comparison">
@@ -85,7 +108,7 @@ function Block({ block }) {
 
     case 'points':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             {head}
             <div className="problem-grid">
@@ -103,7 +126,7 @@ function Block({ block }) {
 
     case 'stats':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             {head}
             <div className="figrow reveal">
@@ -120,7 +143,7 @@ function Block({ block }) {
 
     case 'steps':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             {head}
             <div className="timeline">
@@ -138,7 +161,7 @@ function Block({ block }) {
 
     case 'callout':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             <div className="problem-note reveal">
               <strong>{block.label || 'Our view:'}</strong> {rich(block.body)}
@@ -149,7 +172,7 @@ function Block({ block }) {
 
     case 'quote':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             <blockquote className="pullquote reveal">
               <p>{block.text}</p>
@@ -161,7 +184,7 @@ function Block({ block }) {
 
     case 'feebar':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             {head}
             <div className="model-panel reveal"><FeeBar /></div>
@@ -171,7 +194,7 @@ function Block({ block }) {
 
     case 'checklist':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             {head}
             <ul className="checklist reveal">
@@ -185,7 +208,7 @@ function Block({ block }) {
 
     case 'table':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             {head}
             <Disclose label="View the full table">
@@ -215,6 +238,25 @@ function Block({ block }) {
         </section>
       )
 
+    // Ticket 13 — short buyer FAQ as native <details>, so it is keyboard and
+    // screen-reader accessible and stays crawlable while collapsed.
+    case 'faq':
+      return (
+        <section className={wrap} {...anchor}>
+          <div className="container">
+            {head}
+            <div className="cp-faq reveal">
+              {block.items.map((it, k) => (
+                <details className="cp-faq__item" key={k}>
+                  <summary>{it.q}</summary>
+                  <div className="cp-faq__a">{rich(it.a)}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+
     case 'seealso':
       return (
         <div className="seealso-wrap reveal">
@@ -231,7 +273,7 @@ function Block({ block }) {
 
     case 'related':
       return (
-        <section className={wrap}>
+        <section className={wrap} {...anchor}>
           <div className="container">
             <SectionHead eyebrow="Keep reading" title={block.heading || 'Related'} />
             <div className="related-grid">

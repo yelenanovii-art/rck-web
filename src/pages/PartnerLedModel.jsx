@@ -27,7 +27,7 @@ export default function PartnerLedModel() {
           items: [
             { h: 'Single-Point Operational Ownership', p: 'A named Managing Partner carries direct accountability for your mandate from inception to value realisation. There are no junior pyramids to delegate to, no matrix layers to hide behind, and zero hand-offs where strategic intent gets diluted.' },
             { h: 'Unbroken Strategic Continuity', p: 'The senior practitioner who scopes the thesis, whether in M&A diligence, carve-out separation, or transformation roadmapping, is the same operator governing in-seat execution. We eliminate the costly translation gap between strategy design and operational delivery.' },
-            { h: 'True Commercial Alignment', p: 'The partner governing your mandate carries direct downside risk under our **40/60 outcome model**. With 60% of our fees unlocked only upon independent GL verification of your milestones, alignment is a binding commercial reality, not marketing copy in a pitch deck.' },
+            { h: 'True Commercial Alignment', p: 'The partner governing your mandate carries direct downside risk: under the RCK Outcome Fee Model, 60% of our fee is not earned until your acceptance criteria are met.' },
           ],
         },
         {
@@ -38,7 +38,7 @@ export default function PartnerLedModel() {
           body: [
             'The institutional default is often to hire the largest advisory firm, assuming sheer headcount provides coverage and an insurance policy against failure. Yet in complex M&A, carve-outs, and transformations, failure is rarely caused by a shortage of people. It is driven by the coordination friction of too many.',
             'In traditional matrix firms, decisions are routed through regional practice lines, staffing committees, and internal review layers before reaching the ground. Clients pay premium rates that quietly subsidise internal firm management, while delivery is delegated to junior associates learning on client time.',
-            'Fewer layers mean higher operational velocity. A partner-led model eliminates organisational inertia, ensuring direct, senior-level intervention within 72 hours, translating diagnosis into decisive General Ledger impact without matrix delay.',
+            'Fewer layers mean higher operational velocity. A partner-led model eliminates organisational inertia, ensuring direct, senior-level intervention from Week 1, translating diagnosis into decisive General Ledger impact without matrix delay.',
           ],
         },
         {
@@ -54,7 +54,7 @@ export default function PartnerLedModel() {
           type: 'seealso',
           links: [
             { text: 'Meet the Partners', href: '/about/team' },
-            { text: 'The 40/60 Fee Model', href: '/about/outcomes-vs-advisory' },
+            { text: 'The RCK Outcome Fee Model', href: '/approach/40-60-fee-model' },
           ],
         },
         {
@@ -62,7 +62,7 @@ export default function PartnerLedModel() {
           tint: true,
           heading: 'Read next',
           items: [
-            { tag: 'Model', h: 'The 40/60 fee model', href: '/about/outcomes-vs-advisory' },
+            { tag: 'Model', h: 'The 40/60 fee model', href: '/approach/40-60-fee-model' },
             { tag: 'Playbooks', h: 'Founder-built playbooks', href: '/about/founder-built-playbooks' },
           ],
         },

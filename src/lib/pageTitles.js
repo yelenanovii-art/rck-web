@@ -6,7 +6,7 @@ const TITLES = {
   '/': 'Home',
   '/advisory': 'Deal Advisory & Interim Execution',
   '/about/partner-led-model': 'Why Partner-Led Beats Matrix',
-  '/about/outcomes-vs-advisory': 'The 40/60 Fee Model',
+  '/approach/40-60-fee-model': 'The RCK Outcome Fee Model',
   '/about/team': 'Meet the Partners',
   '/about/our-firm': 'Our Firm',
   '/about/founder-built-playbooks': 'Founder-Built Playbooks',
