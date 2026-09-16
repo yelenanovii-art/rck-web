@@ -41,10 +41,10 @@ export default function Advisory() {
       <section className="hero hero--sub">
         <div className="container hero__inner">
           <p className="eyebrow eyebrow--light">How We Work</p>
-          <h1 className="hero__title">Stop paying for slide decks. Start paying for outcomes.</h1>
+          <h1 className="hero__title">Deal advisory, transformation and interim execution, under one contract.</h1>
           <p className="hero__sub">
-            Partner-led deal advisory and interim execution, one team, one contract, from diligence
-            to value realisation, with 60% of our fee tied to the outcomes we verify in your ledger.
+            Partner-led delivery from diligence to realised value: carve-outs and TSA exits, PMI and
+            cost transformation, ERP programmes, and interim operators in seat when you need them.
           </p>
           <div className="hero__actions">
             <a className="btn btn-gold btn-lg" href="/contact">
@@ -53,34 +53,6 @@ export default function Advisory() {
             <a className="btn btn-outline-light btn-lg" href="#model" onClick={(e) => scrollToId(e, 'model')}>
               See the 40/60 model
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* PROBLEM */}
-      <section className="section">
-        <div className="container">
-          <SectionHead
-            eyebrow="The problem"
-            title="Deal advisory and transformation are sold broken"
-            lede="Value leaks at every hand-off, and the standard commercial models make sponsors and C-suite leaders carry all the delivery risk while paying by the hour."
-          />
-          <div className="problem-grid">
-            {[
-              ['1', 'Hand-off leakage', 'Diligence, integration and exit prep typically sit with three different firms. The deal thesis gets diluted in translation between them.'],
-              ['2', 'The pyramid model', 'Partners sell the engagement; delivery is handed to a team of juniors logging hours against it.'],
-              ['3', 'Advice without accountability', "Large retainers buy reports and recommendations, then your team executes alone, with no one else's fee riding on the result."],
-            ].map(([n, h, p], i) => (
-              <div className="problem-card reveal" style={{ '--delay': `${i * 80}ms` }} key={n}>
-                <div className="num">{n}</div>
-                <h3>{h}</h3>
-                <p>{p}</p>
-              </div>
-            ))}
-          </div>
-          <div className="problem-note reveal">
-            <strong>Our view:</strong> diligence and delivery should sit in the same room, under the
-            same commercial incentive.
           </div>
         </div>
       </section>

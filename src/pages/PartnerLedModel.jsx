@@ -14,7 +14,7 @@ export default function PartnerLedModel() {
         {
           type: 'prose',
           eyebrow: 'The Structural Dilemma: Accountability Diffused by Design',
-          heading: 'Built to Maximise Billable Hours. Not Your Outcome.',
+          heading: 'Four Sets of Hands Before the Work Begins.',
           body: [
             'In a conventional matrix firm, your mandate passes through four distinct hands before real work begins: the origination partner who sold it, the resource manager who staffed it, the project manager who oversees it, and the junior bench executing the slides.',
             'When targets are missed, the matrix provides total plausible deniability.',
