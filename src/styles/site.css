@@ -667,7 +667,13 @@ table.bench {
   background: var(--surface);
   min-width: 640px;
 }
-.table-scroll { box-shadow: 0 0 0 1px var(--line); border-radius: var(--radius-sm); margin-top: 44px; }
+.table-scroll {
+  box-shadow: 0 0 0 1px var(--line);
+  border-radius: var(--radius-sm);
+  margin-top: 44px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 table.compare th,
 table.compare td,
 table.stack th,
