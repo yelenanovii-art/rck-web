@@ -110,6 +110,27 @@ export default function Nav({ path }) {
     if (typeof document !== 'undefined') document.activeElement?.blur?.()
   }, [path])
 
+  // Release the suppression as soon as the pointer genuinely moves again.
+  //
+  // Suppression exists so a menu closes the moment you click through it rather
+  // than hanging around under the cursor. Clearing it only on mouseleave of the
+  // whole header was too blunt: if the pointer stayed in the nav after a click —
+  // which it usually does — every later hover was dead until you moved right off
+  // the bar and back. The short delay ignores the click's own micro-movement,
+  // and any real movement after that restores normal hover immediately.
+  useEffect(() => {
+    if (!suppressed) return undefined
+    let release = () => {}
+    const timer = setTimeout(() => {
+      release = () => setSuppressed(false)
+      window.addEventListener('pointermove', release, { once: true, passive: true })
+    }, 180)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('pointermove', release)
+    }
+  }, [suppressed])
+
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => {
