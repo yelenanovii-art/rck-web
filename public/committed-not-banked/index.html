@@ -28,6 +28,7 @@
      bundle it has no use for. Palette follows the RCK Brand Style Guide. */
   :root {
     --navy: #14263F; --navy-800: #101f34; --copper: #C87137; --copper-600: #9d5626;
+    --copper-light: #F0AE7C; --muted: #6B6F76;
     --slate: #5B6E85; --slate-light: #9DB0C4; --stone: #DDD8CC; --cream: #F2EFE9;
     --ink: #14263F; --white: #fff;
     --font: Carlito, Calibri, -apple-system, "Segoe UI", system-ui, sans-serif;
@@ -46,9 +47,9 @@
   .hero > * { position: relative; z-index: 1; }
   .brand { display: flex; align-items: center; gap: 12px; margin-bottom: clamp(30px,6vw,56px); }
   .brand img { height: 30px; width: auto; }
-  .eyebrow { margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--copper); }
+  .eyebrow { margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--copper-light); }
   h1 { margin: 0 0 18px; font-size: clamp(40px, 8vw, 72px); line-height: 1.02; letter-spacing: -.02em; font-weight: 700; }
-  .sub { margin: 0 0 30px; font-size: clamp(17px, 2vw, 21px); line-height: 1.5; color: #dbe2ec; max-width: 40ch; }
+  .sub { margin: 0 0 30px; font-size: clamp(17px, 2vw, 21px); line-height: 1.5; color: #dbe2ec; max-width: 46ch; }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 30px;
     background: var(--copper); color: #fff; font-weight: 700; font-size: 17px; text-decoration: none; border: 0; border-radius: 8px; cursor: pointer; }
   .btn:hover { background: var(--copper-600); }
@@ -61,10 +62,11 @@
 
   /* STATS */
   .stats { background: var(--navy); color: #fff; margin-top: clamp(40px,6vw,60px); padding: clamp(34px,5vw,48px) 0; }
-  .stats .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 30px; }
+  .stats .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 30px; align-items: stretch; }
+  .stat { display: flex; flex-direction: column; }
   .stat b { display: block; font-size: clamp(36px, 6vw, 54px); line-height: 1; color: var(--copper); font-weight: 700; }
   .stat span { display: block; margin-top: 10px; font-size: 15px; color: #cfd8e4; }
-  .stat cite { display: block; margin-top: 6px; font-size: 13px; font-style: normal; color: var(--slate-light); }
+  .stat cite { display: block; margin-top: auto; padding-top: 10px; font-size: 13px; font-style: normal; color: var(--slate-light); }
 
   /* INSIDE */
   section { padding: clamp(44px,6vw,68px) 0; }
@@ -89,7 +91,7 @@
   .consent { display: flex; gap: 12px; align-items: flex-start; margin: 20px 0; font-size: 14.5px; color: #3d4c60; }
   .consent input { width: 18px; height: 18px; margin-top: 2px; flex: 0 0 auto; }
   .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  .formnote { font-size: 13.5px; color: var(--slate); margin-top: 14px; }
+  .formnote { font-size: 13.5px; color: var(--muted); margin-top: 14px; }
 
   /* THANK YOU */
   .thanks { display: none; background: #fff; border-radius: 14px; padding: clamp(24px,4vw,36px); max-width: 680px; }
@@ -137,9 +139,27 @@
   </ul>
 </section>
 
-<!-- STATS — figures pending: the spec's table did not come through, and the
-     report's numbers must not be invented. Only the $128M figure is stated in
-     the brief text, so the strip stays out until the three are supplied. -->
+<section class="stats" aria-label="Key figures from the report">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat">
+        <b>65%</b>
+        <span>of European PE investors and portfolio executives achieved less than half the value targeted in plans from the past two years</span>
+        <cite>Alvarez &amp; Marsal, 2026</cite>
+      </div>
+      <div class="stat">
+        <b>14%</b>
+        <span>of senior leaders fully captured the value targeted by their highest-priority initiative last year</span>
+        <cite>Deloitte, 2026</cite>
+      </div>
+      <div class="stat">
+        <b>~7 yrs</b>
+        <span>average buyout holding period at exit, up from 5 to 6 years in 2010 to 2021</span>
+        <cite>Bain, 2026</cite>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="inside wrap">
   <h2>What’s inside</h2>
@@ -157,6 +177,10 @@
 <section class="wrap">
   <h2>Who wrote it</h2>
   <div class="author">
+    <!-- The spec links Shaun's name to his LinkedIn profile. No URL is on record
+         anywhere in the repo (every partner JSON has linkedin: ""), so the name is
+         left unlinked rather than pointed somewhere wrong. To enable, wrap the
+         <strong> below in <a href="https://www.linkedin.com/in/...">. -->
     <p><strong>Shaun Taylor</strong>, founder of RCK Programme Methods and a 20-year interim CIO, COO, CRO and Chief Transformation Officer, wrote this report from one live programme he ran as Group Chief Transformation Officer of a multi-region telecoms group.</p>
   </div>
 </section>
@@ -171,6 +195,7 @@
            attributed to the post variant that produced it. -->
       <input type="hidden" name="utm_source" /><input type="hidden" name="utm_medium" />
       <input type="hidden" name="utm_campaign" /><input type="hidden" name="utm_content" />
+      <input type="hidden" name="email_type" />
       <p class="hp"><label>Company website <input name="company-website" tabindex="-1" autocomplete="off" /></label></p>
 
       <div class="row">
@@ -183,20 +208,106 @@
         <div class="field"><label for="role">Role <span class="req">*</span></label>
           <select id="role" name="role" required>
             <option value="">Select…</option>
-            <option>CFO / Finance leadership</option>
+            <option>CFO</option>
             <option>Chief Transformation Officer</option>
             <option>PE operating partner</option>
             <option>Audit committee chair</option>
-            <option>COO / Operations leadership</option>
-            <option>CIO / CTO</option>
             <option>Other</option>
           </select>
         </div>
-        <div class="field"><label for="country">Country <span class="req">*</span></label><input id="country" name="country" required autocomplete="country-name" /></div>
+        <div class="field"><label for="country">Country <span class="req">*</span></label>
+          <select id="country" name="country" required autocomplete="country-name">
+            <option value="">Select…</option>
+            <optgroup label="UK, EU and EEA">
+            <option>Austria</option>
+            <option>Belgium</option>
+            <option>Bulgaria</option>
+            <option>Croatia</option>
+            <option>Cyprus</option>
+            <option>Czechia</option>
+            <option>Denmark</option>
+            <option>Estonia</option>
+            <option>Finland</option>
+            <option>France</option>
+            <option>Germany</option>
+            <option>Greece</option>
+            <option>Hungary</option>
+            <option>Iceland</option>
+            <option>Ireland</option>
+            <option>Italy</option>
+            <option>Latvia</option>
+            <option>Liechtenstein</option>
+            <option>Lithuania</option>
+            <option>Luxembourg</option>
+            <option>Malta</option>
+            <option>Netherlands</option>
+            <option>Norway</option>
+            <option>Poland</option>
+            <option>Portugal</option>
+            <option>Romania</option>
+            <option>Slovakia</option>
+            <option>Slovenia</option>
+            <option>Spain</option>
+            <option>Sweden</option>
+            <option>Switzerland</option>
+            <option>United Kingdom</option>
+            </optgroup>
+            <optgroup label="Rest of world">
+            <option>Albania</option>
+            <option>Argentina</option>
+            <option>Australia</option>
+            <option>Bahrain</option>
+            <option>Bangladesh</option>
+            <option>Bosnia and Herzegovina</option>
+            <option>Brazil</option>
+            <option>Canada</option>
+            <option>Chile</option>
+            <option>China</option>
+            <option>Colombia</option>
+            <option>Egypt</option>
+            <option>Georgia</option>
+            <option>Hong Kong SAR</option>
+            <option>India</option>
+            <option>Indonesia</option>
+            <option>Israel</option>
+            <option>Japan</option>
+            <option>Kazakhstan</option>
+            <option>Kenya</option>
+            <option>Kuwait</option>
+            <option>Malaysia</option>
+            <option>Mexico</option>
+            <option>Moldova</option>
+            <option>Morocco</option>
+            <option>New Zealand</option>
+            <option>Nigeria</option>
+            <option>North Macedonia</option>
+            <option>Oman</option>
+            <option>Pakistan</option>
+            <option>Philippines</option>
+            <option>Qatar</option>
+            <option>Saudi Arabia</option>
+            <option>Serbia</option>
+            <option>Singapore</option>
+            <option>South Africa</option>
+            <option>South Korea</option>
+            <option>Sri Lanka</option>
+            <option>Taiwan</option>
+            <option>Thailand</option>
+            <option>Turkey</option>
+            <option>Ukraine</option>
+            <option>United Arab Emirates</option>
+            <option>United States</option>
+            <option>Vietnam</option>
+            </optgroup>
+            <option value="Other">Other — not listed</option>
+          </select>
+        </div>
       </div>
 
-      <label class="consent"><input type="checkbox" name="marketing_consent" value="yes" />
-        <span>Email me RCK’s follow-up on this report. Optional — you’ll get the report either way, and can unsubscribe at any time.</span></label>
+      <div class="consent">
+        <input type="checkbox" id="consent" name="marketing_consent" value="yes" />
+        <label for="consent">I agree to receive occasional emails from RCK Programme Methods. <a href="/privacy">See the privacy policy</a>. Optional — you’ll get the report either way.</label>
+      </div>
 
       <button class="btn" type="submit">Download the report</button>
       <p class="formnote">We process your details under our <a href="/privacy">Privacy Policy</a>. The report is sent immediately; the box above is only for follow-up.</p>
@@ -240,22 +351,72 @@
 
   // Submit without leaving the page, so the PDF is one click away rather than
   // waiting on an email. Netlify Forms accepts a urlencoded POST to the page.
+  // The privacy link sits inside the consent label, so stop a click on it from
+  // toggling the checkbox the label is bound to.
+  var plink = document.querySelector('.consent a');
+  if (plink) plink.addEventListener('click', function (e) { e.stopPropagation(); });
+
+  // Free personal domains are accepted but flagged, so follow-up can be routed
+  // by hand rather than bounced at the form.
+  var PERSONAL = ['gmail.com','googlemail.com','hotmail.com','hotmail.co.uk','outlook.com',
+    'live.com','msn.com','yahoo.com','yahoo.co.uk','icloud.com','me.com','mac.com',
+    'aol.com','proton.me','protonmail.com','gmx.com','gmx.de','web.de','mail.com',
+    'yandex.com','zoho.com','qq.com','163.com'];
+  function classify(email) {
+    var at = String(email || '').toLowerCase().split('@');
+    if (at.length !== 2) return '';
+    return PERSONAL.indexOf(at[1]) > -1 ? 'personal' : 'work';
+  }
+
+  // One submission per email per 24 hours. This only stops repeat sends from
+  // the same browser; it is a courtesy guard, not the bot control — the
+  // honeypot above is.
+  var WINDOW = 24 * 60 * 60 * 1000;
+  function recentlySent(email) {
+    try {
+      var seen = JSON.parse(localStorage.getItem('cnb-sent') || '{}');
+      return seen[email] && (Date.now() - seen[email]) < WINDOW;
+    } catch (e) { return false; }
+  }
+  function remember(email) {
+    try {
+      var seen = JSON.parse(localStorage.getItem('cnb-sent') || '{}');
+      seen[email] = Date.now();
+      localStorage.setItem('cnb-sent', JSON.stringify(seen));
+    } catch (e) { /* private mode: the guard is optional */ }
+  }
+
   var form = document.querySelector('form[name="committed-not-banked"]');
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
+    var email = String(form.elements.email.value || '').trim().toLowerCase();
+    var typeEl = form.querySelector('input[name="email_type"]');
+    if (typeEl) typeEl.value = classify(email);
+
     var data = new FormData(form);
     if (data.get('company-website')) return; // honeypot tripped
+
+    // Already sent from this browser today: go straight to the download rather
+    // than logging a duplicate lead.
+    if (recentlySent(email)) { done(email); return; }
+
     fetch('/committed-not-banked/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(data).toString(),
-    }).finally(function () {
-      var to = data.get('email');
-      document.getElementById('sent-to').textContent = to ? 'to ' + to + ' ' : '';
-      document.body.classList.add('is-done');
-      document.getElementById('thanks').scrollIntoView({ block: 'start' });
-    });
+    }).then(function (r) {
+      // Only bank the guard on a submission that actually landed, so a dropped
+      // connection doesn't lock the visitor out of being captured for a day.
+      if (r && r.ok) remember(email);
+    }).catch(function () { /* the download still proceeds */ })
+      .finally(function () { done(email); });
   });
+
+  function done(email) {
+    document.getElementById('sent-to').textContent = email ? 'to ' + email + ' ' : '';
+    document.body.classList.add('is-done');
+    document.getElementById('thanks').scrollIntoView({ block: 'start' });
+  }
 })();
 </script>
 </body>
