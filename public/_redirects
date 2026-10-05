@@ -36,6 +36,49 @@
 /news-1                      /insights                                       301!
 /news-1-1                    /insights                                       301!
 
-# SPA fallback: if a prerendered file exists for the path Netlify serves it;
-# otherwise fall back to the app shell so client-side routes never 404.
-/*  /index.html  200
+# ── Aliases that were client-side only ───────────────────────────────────────
+# App.jsx carries a REDIRECTS map that rewrites these in the browser. That only
+# ever worked because the SPA fallback below answered 200 for any path, which
+# also made every one of them a soft 404 to a crawler: real content served at a
+# URL that should not exist. Promoted to server-side 301s so the canonical page
+# gets the equity and the alias stops being indexable. The client-side map stays
+# as belt and braces for in-app navigation.
+/about/partners              /about/team                                     301!
+/about/why-smaller-beats-bigger  /about/partner-led-model                    301!
+/assessment                  /diagnostics/value-at-risk                      301!
+/aviso-legal                 /legal                                          301!
+/calculator                  /diagnostics/deal-value-modeller                301!
+/cookie-policy               /cookies                                        301!
+/legal-notice                /legal                                          301!
+/outcome-circle              /the-outcome-circle                             301!
+/privacy-policy              /privacy                                        301!
+/resources/case-studies      /case-studies                                   301!
+/resources/playbook          /resources/playbooks                            301!
+/terms-and-conditions        /terms                                          301!
+/terms-of-use                /terms                                          301!
+/transform-plus              /products/transform-plus                        301!
+
+# ── Legacy paths from the consolidation spec that resolve here ───────────────
+# Only the ones whose target actually exists. /services, /carve-out-day-1-tsa
+# and /technology-cyber-diligence are in the spec but have no page yet, so
+# redirecting to them would trade a 404 for a 301 into a 404.
+/work                        /case-studies                                   301!
+/readiness                   /diagnostics/readiness-score                    301!
+
+# WordPress taxonomy paths, for the rck-pm.com content when it lands here.
+# NOTE: the spec's "/post/* -> /insights/:splat" rule is deliberately absent.
+# /post/<slug> is this site's live canonical blog URL — 12 posts were migrated
+# off Wix at exactly those addresses so no redirect was needed. That rule would
+# 301 every live post to /insights/<slug>, which does not exist.
+/category/*                  /insights                                       301!
+/author/*                    /about/team                                     301!
+
+# ── Unmatched paths get a real 404 ──────────────────────────────────────────
+# Previously this was "/*  /index.html  200", which answered every URL on the
+# domain with the app shell and HTTP 200 — a soft 404. Crawlers read that as
+# "infinite valid pages", which wastes crawl budget and can suppress the real
+# ones. Safe to make strict because every router page is prerendered to a real
+# file: scripts/prerender.mjs ROUTES and the ROUTES map in src/App.jsx are in
+# sync (30 each, verified), and blog posts are added from disk. If you add a
+# page to App.jsx, add it to prerender.mjs too or it will now hard-404.
+/*  /404.html  404

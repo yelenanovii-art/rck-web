@@ -40,6 +40,32 @@
     Content-Security-Policy = "frame-ancestors 'self' https://app.storyblok.com"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
 
+# Vite writes content-hashed filenames into /assets, so a given URL's bytes can
+# never change — but Netlify's default is "max-age=0, must-revalidate", which
+# makes every repeat visit revalidate every bundle. Marking them immutable is
+# safe precisely because a rebuild produces new filenames.
+#
+# Only /assets is hashed. /brand and /photos keep the revalidating default, or a
+# replaced logo would stay stale in browsers for a year.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=UTF-8"
+    Cache-Control = "public, max-age=3600"
+
+# Deliberately NOT setting X-Frame-Options. The consolidation spec asks for
+# "DENY", which would block the Storyblok Visual Editor from previewing the
+# deployed site in its iframe and break content editing. The
+# Content-Security-Policy frame-ancestors directive above is the modern
+# equivalent, is honoured by every current browser, and already allows exactly
+# one origin. Adding XFO would only override that with a stricter, less precise
+# rule in older browsers.
+
 # ⚠️  REMOVE THIS BLOCK AT DOMAIN CUTOVER — IT HIDES THE SITE FROM GOOGLE. ⚠️
 #
 # The site currently serves from rck-web.netlify.app while www.rckpm.es still

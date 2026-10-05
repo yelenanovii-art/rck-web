@@ -31,8 +31,9 @@ export const BOOKING_URL = isBookingPlaceholder(BOOKING_URL_RAW) ? '' : BOOKING_
 // link — it goes live automatically once filled in.
 const cleanSocial = (u) => (!u || /your-|example|placeholder/i.test(u) ? '' : u)
 export const SOCIAL = {
-  // e.g. 'https://www.linkedin.com/company/rck-outcome-partners'
-  linkedin: cleanSocial(import.meta.env.VITE_SOCIAL_LINKEDIN || ''),
+  // RCK's company page, confirmed live. The old example slug in this comment
+  // ('rck-outcome-partners') had leaked into index.html's sameAs and 404s.
+  linkedin: cleanSocial(import.meta.env.VITE_SOCIAL_LINKEDIN || 'https://www.linkedin.com/company/rckpm/'),
   // e.g. 'https://x.com/rckoutcome'
   twitter: cleanSocial(import.meta.env.VITE_SOCIAL_TWITTER || ''),
 }
@@ -41,14 +42,16 @@ export const SOCIAL = {
 // Used by the Legal Notice, Privacy Policy, Cookie Policy and Terms pages so the
 // legal identity lives in one place. Trading name is stated alongside the legal
 // name per the P0-2 fix. registeredAddress is the one field that cannot be
-// invented — add the full Barcelona registered street address before launch
-// (the source Legal Notice leaves it as "[Insert Physical Address]").
+// invented. The consolidation spec gives the postcode as 08013; OpenStreetMap
+// resolves Avinguda Diagonal 317 to 08009. Left out until someone confirms it
+// against the Registro Mercantil entry for NIF B67505313 — this address is
+// the LSSI-CE Art. 10 registered address, so a wrong digit is worse than none.
 export const COMPANY = {
   legalName: 'RCK Programme Methods S.L.',
   tradingName: 'RCK Outcome Partners',
   nif: 'B67505313',
   registeredCity: 'Barcelona, Spain',
-  registeredAddress: 'Avenida Diagonal 317, Barcelona, Spain', // add postal code if required
+  registeredAddress: 'Avenida Diagonal 317, Barcelona, Spain', // postcode still unconfirmed — see note above
   email: 'info@rckpm.es',
   supervisoryAuthority: 'Agencia Española de Protección de Datos (AEPD, www.aepd.es)',
 }
