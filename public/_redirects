@@ -58,12 +58,14 @@
 /terms-of-use                /terms                                          301!
 /transform-plus              /products/transform-plus                        301!
 
-# ── Legacy paths from the consolidation spec that resolve here ───────────────
-# Only the ones whose target actually exists. /services, /carve-out-day-1-tsa
-# and /technology-cyber-diligence are in the spec but have no page yet, so
-# redirecting to them would trade a 404 for a 301 into a 404.
+# ── Legacy paths from the consolidation spec ─────────────────────────────────
+# These are the WordPress URLs on rck-pm.com. Their targets now exist here, so
+# the rules are live rather than omitted.
 /work                        /case-studies                                   301!
 /readiness                   /diagnostics/readiness-score                    301!
+/carve-out-day-1-tsa         /services/carve-out-day-1-tsa                   301!
+/technology-cyber-diligence  /services/technology-cyber-diligence            301!
+/post-merger-integration     /services/post-merger-integration               301!
 
 # WordPress taxonomy paths, for the rck-pm.com content when it lands here.
 # NOTE: the spec's "/post/* -> /insights/:splat" rule is deliberately absent.

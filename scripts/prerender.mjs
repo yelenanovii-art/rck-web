@@ -16,6 +16,8 @@ const ROUTES = [
   '/about/founder-built-playbooks', '/services/transformation-outcomes',
   '/services/interim-management', '/services/integrated-interim',
   '/resources/playbooks', '/case-studies', '/the-outcome-circle',
+  '/services', '/sectors', '/services/carve-out-day-1-tsa',
+  '/services/technology-cyber-diligence', '/services/post-merger-integration',
   '/services/deal-advisory-carve-outs', '/services/value-creation-cost-transformation',
   '/services/restructuring-turnaround', '/services/erp-enterprise-applications',
   '/services/erp/application-si-selection', '/services/erp/programme-assurance', '/services/erp/implementation',

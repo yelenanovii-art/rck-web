@@ -62,6 +62,26 @@ const META = {
     d: 'An invitation-only collective of 200+ battle-tested Interim CxOs and PE deal operators executing under shared 40/60 outcome-contingent terms.',
     k: 'interim CxO, fractional, transformation director, PE operators, invitation-only',
   },
+  '/services': {
+    t: 'Services',
+    d: 'One senior team from diligence through SPA, TSA and integration. Six playbooks, one findings register, and 60% of our fee released only against verified outcomes.',
+  },
+  '/services/carve-out-day-1-tsa': {
+    t: 'Carve-Out, Day-1 & TSA Services',
+    d: 'Separation planning, Day-1 operating-model design, and TSA scope, economics and exit. Excluded Services scoped in diligence and stranded cost detected early.',
+  },
+  '/services/technology-cyber-diligence': {
+    t: 'Technology & Cyber Due Diligence',
+    d: 'Six-workstream technology and cyber diligence for M&A, each finding routed to a negotiation lever. Partner-led fieldwork mobilised in 48 to 72 hours.',
+  },
+  '/services/post-merger-integration': {
+    t: 'Post-Merger Integration',
+    d: 'Operating-model migration, synergy capture and governance, led by the team that ran the diligence and tracked against the thesis that priced the deal.',
+  },
+  '/sectors': {
+    t: 'Sectors',
+    d: 'Six core sectors with a sector-matched senior lead on every mandate, across the UK, Spain, Germany, France, Italy, Ireland, Sweden, Poland and the UAE.',
+  },
   '/services/deal-advisory-carve-outs': {
     t: 'Deal Advisory & Carve-Outs',
     d: 'Pre-deal operational diligence to flawless Day-1 separation and TSA exit, on the 40/60 model with 60% of fees at risk against milestone-locked cutover.',

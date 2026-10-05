@@ -66,20 +66,8 @@
 # one origin. Adding XFO would only override that with a stricter, less precise
 # rule in older browsers.
 
-# ⚠️  REMOVE THIS BLOCK AT DOMAIN CUTOVER — IT HIDES THE SITE FROM GOOGLE. ⚠️
-#
-# The site currently serves from rck-web.netlify.app while www.rckpm.es still
-# runs the old Wix site. Every page here emits canonical/OG URLs pointing at
-# www.rckpm.es, so letting crawlers index the netlify.app copy would point them
-# at a domain serving different content. This header keeps the staging copy out
-# of the index until the real domain is attached.
-#
-# Netlify's [[headers]] are path-scoped, not host-scoped, so this applies to
-# EVERY host — including www.rckpm.es once it points here. Delete this block as
-# part of the cutover, or the launched site will never be indexed. (For a
-# host-aware version that needs no cleanup, an edge function can set the header
-# only when the request Host ends in .netlify.app.)
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
+# The staging noindex block that used to live here has been removed. It was
+# added while the site served only from rck-web.netlify.app and www.rckpm.es
+# still ran the old Wix site. That cutover has happened — www.rckpm.es now
+# serves this build — so the guard was suppressing production from search
+# entirely, which robots.txt (Allow: /) and every canonical tag contradict.
