@@ -2,6 +2,11 @@
 User-agent: *
 Allow: /
 
+# Decap CMS lives here and is behind GitHub OAuth. Nothing to index, and it
+# only wastes crawl budget. (The spec's /cdn-cgi/ and /_next/ rules are for
+# Cloudflare and Next.js respectively — neither is in play on this site.)
+Disallow: /admin/
+
 # Search + AI answer engines are explicitly welcome (AEO/GEO).
 User-agent: Googlebot
 Allow: /

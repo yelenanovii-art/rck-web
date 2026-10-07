@@ -40,20 +40,34 @@
     Content-Security-Policy = "frame-ancestors 'self' https://app.storyblok.com"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
 
-# ⚠️  REMOVE THIS BLOCK AT DOMAIN CUTOVER — IT HIDES THE SITE FROM GOOGLE. ⚠️
+# Vite writes content-hashed filenames into /assets, so a given URL's bytes can
+# never change — but Netlify's default is "max-age=0, must-revalidate", which
+# makes every repeat visit revalidate every bundle. Marking them immutable is
+# safe precisely because a rebuild produces new filenames.
 #
-# The site currently serves from rck-web.netlify.app while www.rckpm.es still
-# runs the old Wix site. Every page here emits canonical/OG URLs pointing at
-# www.rckpm.es, so letting crawlers index the netlify.app copy would point them
-# at a domain serving different content. This header keeps the staging copy out
-# of the index until the real domain is attached.
-#
-# Netlify's [[headers]] are path-scoped, not host-scoped, so this applies to
-# EVERY host — including www.rckpm.es once it points here. Delete this block as
-# part of the cutover, or the launched site will never be indexed. (For a
-# host-aware version that needs no cleanup, an edge function can set the header
-# only when the request Host ends in .netlify.app.)
+# Only /assets is hashed. /brand and /photos keep the revalidating default, or a
+# replaced logo would stay stale in browsers for a year.
 [[headers]]
-  for = "/*"
+  for = "/assets/*"
   [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=UTF-8"
+    Cache-Control = "public, max-age=3600"
+
+# Deliberately NOT setting X-Frame-Options. The consolidation spec asks for
+# "DENY", which would block the Storyblok Visual Editor from previewing the
+# deployed site in its iframe and break content editing. The
+# Content-Security-Policy frame-ancestors directive above is the modern
+# equivalent, is honoured by every current browser, and already allows exactly
+# one origin. Adding XFO would only override that with a stricter, less precise
+# rule in older browsers.
+
+# The staging noindex block that used to live here has been removed. It was
+# added while the site served only from rck-web.netlify.app and www.rckpm.es
+# still ran the old Wix site. That cutover has happened — www.rckpm.es now
+# serves this build — so the guard was suppressing production from search
+# entirely, which robots.txt (Allow: /) and every canonical tag contradict.

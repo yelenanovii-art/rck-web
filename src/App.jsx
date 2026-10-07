@@ -40,6 +40,11 @@ import {
   ErpApplicationSiSelection,
   ErpProgrammeAssurance,
   ErpImplementation,
+  ServicesHub,
+  CarveOutDay1Tsa,
+  TechnologyCyberDiligence,
+  PostMergerIntegration,
+  SectorsHub,
 } from './pages/servicePages'
 
 const ROUTES = {
@@ -64,6 +69,11 @@ const ROUTES = {
   '/services/interim-management': InterimManagement,
   '/the-outcome-circle': OutcomeCircle,
   // Advisory & Transformation service pages
+  '/services': ServicesHub,
+  '/services/carve-out-day-1-tsa': CarveOutDay1Tsa,
+  '/services/technology-cyber-diligence': TechnologyCyberDiligence,
+  '/services/post-merger-integration': PostMergerIntegration,
+  '/sectors': SectorsHub,
   '/services/deal-advisory-carve-outs': DealAdvisoryCarveOuts,
   '/services/value-creation-cost-transformation': ValueCreationCostTransformation,
   '/services/restructuring-turnaround': RestructuringTurnaround,

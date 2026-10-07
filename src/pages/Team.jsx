@@ -3,6 +3,16 @@ import CTABand from '../components/CTABand'
 import { LinkedIn } from '../components/Icons'
 import { SITE_URL } from '../config'
 
+// Anchor-safe slug for a partner's @id. Strips accents first so "Ana Herrera"
+// and any accented name both produce a clean, stable fragment.
+const slugify = (name) =>
+  name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+
 // LinkedIn badge pinned to the corner of a partner's photo. Renders a live
 // link when that partner's `linkedin` URL is set in their JSON; until then it
 // stays visible but inert ("link coming soon") so no dead link ships.
@@ -67,6 +77,9 @@ export default function Team() {
         '@type': 'ListItem',
         position: i + 1,
         item: {
+          // Stable @id so other nodes (and Google's graph) can point at a
+          // specific partner instead of an anonymous blank node.
+          '@id': SITE_URL + '/about/team#' + slugify(p.name),
           '@type': 'Person',
           name: p.name,
           jobTitle: p.role,
