@@ -14,10 +14,14 @@ export function Mark({ size = 40, className = '', navy = 'currentColor', gold = 
 // Primary logo. Loads the RCK wordmark image (navy letters + copper ribbon) that
 // you drop into public/brand/. Until the file exists, it falls back to a clean
 // text wordmark — navy "RC" + copper "K" — that adapts to light/dark automatically.
-// Candidate files per background, tried in order (svg → png). Drop any one of
-// these into public/brand/ and it appears automatically.
-const LIGHT_SRCS = ['/brand/rck-logo.svg', '/brand/rck-logo.png']
-const DARK_SRCS = ['/brand/rck-logo-white.svg', '/brand/rck-logo-white.png']
+// Candidate files per background, tried in order. Only formats that actually
+// exist in public/brand/ belong here: the component walks the list on error, so
+// a listed-but-missing file costs a 404 on every single page load. The .svg
+// entries used to sit first and were doing exactly that — 359 failed requests
+// in a month, enough to show up as the site's #2 "top page" in analytics.
+// Adding an SVG later means dropping the file in AND listing it here.
+const LIGHT_SRCS = ['/brand/rck-logo.png']
+const DARK_SRCS = ['/brand/rck-logo-white.png']
 
 export default function Logo({ compact = false, light = false, onDark = false, onNav }) {
   const [i, setI] = useState(0)
